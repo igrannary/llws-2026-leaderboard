@@ -208,7 +208,11 @@ function renderHeader(data) {
   }
   $('#progress').textContent =
     `Game ${data.games_played} of ${data.games_total}`;
-  $('#updated').textContent = 'Updated ' + (data.generated_display || '');
+  /* "Updated" reads as "we last looked", so it has to mean that. The
+     updater republishes at least every half hour even when nothing has
+     happened, so a stale time here is a real fault rather than a quiet
+     afternoon. */
+  $('#updated').textContent = 'Checked ' + (data.generated_display || '');
 }
 
 function pickClass(p) {
