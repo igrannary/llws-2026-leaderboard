@@ -10,6 +10,53 @@ const ROTATE_OVERRIDE = parseFloat(params.get('rotate'));
 const REFRESH_MS = 60000;
 const PINNED = params.get('view');
 
+/* ----------------------------------------------------------------- overscan
+   Televisions crop the edges of an HDMI signal, typically 2-5% a side, which
+   is what made the score column disappear off the side of the office TV.
+   Everything is inset by a safe area the operator can tune on the screen
+   itself: [ and ] nudge it, 0 resets, and the value is remembered per screen
+   so it survives a reload. ?safe=4 sets it directly where there is no
+   keyboard. */
+const SAFE_KEY = 'llws-safe-percent';
+const clampSafe = v => Math.min(12, Math.max(0, v));
+
+function readSafe() {
+  const fromUrl = parseFloat(params.get('safe'));
+  if (!Number.isNaN(fromUrl)) return clampSafe(fromUrl);
+  let stored = NaN;
+  try { stored = parseFloat(localStorage.getItem(SAFE_KEY)); } catch (e) {}
+  return Number.isNaN(stored) ? 3 : clampSafe(stored);
+}
+
+let safePercent = readSafe();
+let safeHudTimer = null;
+
+function applySafe(show) {
+  const root = document.documentElement;
+  root.style.setProperty('--safe-x', safePercent + 'vw');
+  // Vertical crop is usually a little less aggressive than horizontal.
+  root.style.setProperty('--safe-y', (safePercent * 0.8) + 'vh');
+  if (!show) return;
+  const hud = $('#safe-hud'), stage = $('#stage');
+  if (!hud) return;
+  hud.innerHTML = 'Screen fit &nbsp;' + safePercent.toFixed(1) + '%' +
+    '<small>[ and ] to adjust &middot; 0 to reset</small>';
+  hud.classList.add('on');
+  stage.classList.add('calibrating');
+  clearTimeout(safeHudTimer);
+  safeHudTimer = setTimeout(() => {
+    hud.classList.remove('on');
+    stage.classList.remove('calibrating');
+  }, 2600);
+}
+
+function nudgeSafe(delta) {
+  safePercent = clampSafe(Math.round((safePercent + delta) * 10) / 10);
+  try { localStorage.setItem(SAFE_KEY, safePercent); } catch (e) {}
+  applySafe(true);
+  if (currentData) { rebuildViews(currentData); renderStandings(currentData); }
+}
+
 /* Dwell per view: big pools paginate into more views, so shorten each one to
    keep a full cycle around a minute rather than a minute and a half. */
 function rotateMs() {
@@ -96,7 +143,7 @@ function fitStandings(data, guard = 0) {
   if (rows.length < 2) return;
   const bottom = rows[rows.length - 1].getBoundingClientRect().bottom;
   const limit = $('#ticker').getBoundingClientRect().top;
-  if (bottom <= limit) return;
+  if (bottom <= limit + 1) return;
   pageSize = Math.max(4, pageSize - 1);
   const pages = Math.max(1, Math.ceil(data.standings.length / pageSize));
   const current = VIEWS[viewIndex];
@@ -116,14 +163,13 @@ function rebuildViews(data) {
   if (isNarrow()) {
     pageSize = n || 1;
   } else {
-    // Row height comes from CSS (--row-h + margin); measure a real row when
-    // one exists, and fall back to the declared value on first paint.
-    const sample = document.querySelector('#standings .row');
-    let rowH = window.innerHeight * 0.081;
-    if (sample) {
-      const box = sample.getBoundingClientRect();
-      rowH = box.height + parseFloat(getComputedStyle(sample).marginTop || 0);
-    }
+    // Nominal row height from CSS, never a measured one: rows now stretch to
+    // fill the column, so measuring them would feed their own stretch back
+    // into the count and oscillate.
+    const declared = getComputedStyle(document.documentElement)
+                       .getPropertyValue('--row-h').trim();
+    const nominalVh = parseFloat(declared) || 7.5;
+    const rowH = window.innerHeight * (nominalVh + 0.62) / 100;
     const avail = $('#ticker').getBoundingClientRect().top
                   - $('#standings').getBoundingClientRect().top - 4;
     pageSize = Math.max(6, Math.floor(avail / rowH));
@@ -301,14 +347,22 @@ function renderTicker(data) {
   $('#tick-next').innerHTML = next
     ? `${next.a_display || shown(next.a)} <span class="dim">vs</span> ` +
       `${next.b_display || shown(next.b)}` +
-      ` <span class="dim">&mdash; ${next.label}, ${fmtDate(next.date)}` +
-      ` ${next.time} ${data.timezone || 'PT'}</span>`
+      ` <span class="dim">&mdash; ${next.label}, ` +
+      `${fmtWhen(next.date, next.time, data.timezone || 'PT')}</span>`
     : '<span class="dim">Tournament complete</span>';
 }
 
 function fmtDate(iso) {
   const d = new Date(iso + 'T12:00:00');
   return d.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' });
+}
+
+/* Today needs no date on it, and the space buys the full matchup. */
+function fmtWhen(iso, time, tz) {
+  const today = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  const key = `${today.getFullYear()}-${pad(today.getMonth() + 1)}-${pad(today.getDate())}`;
+  return (iso === key ? '' : fmtDate(iso) + ' ') + time + ' ' + tz;
 }
 
 /* ------------------------------------------------------------- rotation */
@@ -355,8 +409,16 @@ document.addEventListener('keydown', e => {
     goto(viewIndex + 1); restartRotation();
   } else if (e.code === 'ArrowLeft') {
     goto(viewIndex - 1); restartRotation();
+  } else if (e.key === '[') {
+    nudgeSafe(0.5);           // crop more: pull the picture in
+  } else if (e.key === ']') {
+    nudgeSafe(-0.5);          // crop less: push the picture out
+  } else if (e.key === '0') {
+    safePercent = 3; nudgeSafe(0);
   }
 });
+
+applySafe(false);
 
 /* Re-measure on resize: row capacity per page depends on viewport height. */
 let resizeTimer;

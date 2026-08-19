@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LLWS 2026 Office Pool</title>
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127934;</text></svg>">
 </head>
 <body>
@@ -49,17 +49,21 @@
 
   <footer id="ticker">
     <div class="tick-block">
-      <span class="tick-label">Latest</span>
+      <span class="tick-label"><span>Latest</span></span>
       <span id="tick-latest" class="tick-body"></span>
     </div>
     <div class="tick-block">
-      <span class="tick-label">Next up</span>
+      <span class="tick-label"><span>Next up</span></span>
       <span id="tick-next" class="tick-body"></span>
     </div>
     <div class="tick-dots" id="view-dots"></div>
   </footer>
 
 </div>
-<script src="app.js?v=3"></script>
+
+<!-- Shown only while someone is fitting the picture to the TV with [ and ]. -->
+<div id="safe-hud"></div>
+
+<script src="app.js?v=4"></script>
 </body>
 </html>
