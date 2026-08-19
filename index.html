@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLWS 2026 Office Pool</title>
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127934;</text></svg>">
+</head>
+<body>
+<div id="stage">
+
+  <header id="topbar">
+    <div class="brand">
+      <span class="brand-mark">LLWS</span>
+      <span class="brand-name">2026 Office Pool</span>
+    </div>
+    <div id="phase" class="phase"></div>
+    <div class="meta">
+      <span id="progress"></span>
+      <span id="updated"></span>
+    </div>
+  </header>
+
+  <main id="view-standings" class="view">
+    <div class="col-head">
+      <span class="ch-rank">Rank</span>
+      <span class="ch-name">Participant</span>
+      <span class="ch-picks">Their eight picks &mdash; #1 to #8 <i id="page-note"></i></span>
+      <span class="ch-alive">Alive</span>
+      <span class="ch-score">Points</span>
+    </div>
+    <ol id="standings"></ol>
+  </main>
+
+  <main id="view-teams" class="view hidden">
+    <h2 class="phone-only section-head">Where every team stands</h2>
+    <div class="teams-wrap">
+      <section class="side">
+        <h2 class="side-title us">United States</h2>
+        <div class="team-grid" id="teams-us"></div>
+      </section>
+      <section class="side">
+        <h2 class="side-title intl">International</h2>
+        <div class="team-grid" id="teams-intl"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer id="ticker">
+    <div class="tick-block">
+      <span class="tick-label">Latest</span>
+      <span id="tick-latest" class="tick-body"></span>
+    </div>
+    <div class="tick-block">
+      <span class="tick-label">Next up</span>
+      <span id="tick-next" class="tick-body"></span>
+    </div>
+    <div class="tick-dots" id="view-dots"></div>
+  </footer>
+
+</div>
+<script src="app.js?v=3"></script>
+</body>
+</html>

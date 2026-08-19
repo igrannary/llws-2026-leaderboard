@@ -1,0 +1,482 @@
+/* LLWS 2026 Office Pool - broadcast leaderboard.
+   Designed for a 1920x1080 office TV; scales by viewport so nothing scrolls.
+   All sizing is in cqh/vh-derived units so one layout serves TV and laptop. */
+
+:root {
+  --navy-900: #080d1a;
+  --navy-800: #0d1526;
+  --navy-700: #131f38;
+  --navy-600: #1b2b4d;
+  --line: #24365c;
+  --ink: #eef3ff;
+  --ink-dim: #8fa3c8;
+  --ink-faint: #5c7099;
+  --gold: #f0b429;
+  --gold-deep: #c98f10;
+  --green: #37d67a;
+  --amber: #ff9f1c;
+  --red: #ff5d5d;
+  --us: #4f8cff;
+  --intl: #b98cff;
+
+  --u: 1vh;                     /* vertical rhythm unit */
+  --row-h: 7.4vh;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  background: var(--navy-900);
+  color: var(--ink);
+  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {                  /* subtle stadium glow, keeps flat dark alive */
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(90vw 60vh at 50% -18%, rgba(60,110,220,.22), transparent 65%),
+    radial-gradient(50vw 40vh at 100% 110%, rgba(240,180,41,.10), transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+#stage {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 11vh 1fr 8.5vh;
+}
+
+/* ---------------------------------------------------------------- topbar */
+#topbar {
+  display: flex;
+  align-items: center;
+  gap: 2.2vw;
+  padding: 0 2.6vw;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--navy-800), rgba(13,21,38,.35));
+}
+
+.brand { display: flex; align-items: baseline; gap: .8vw; }
+
+.brand-mark {
+  font-size: 4.4vh;
+  font-weight: 800;
+  letter-spacing: .04em;
+  color: var(--gold);
+  text-shadow: 0 0 3vh rgba(240,180,41,.35);
+}
+
+.brand-name {
+  font-size: 2.5vh;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.phase {
+  margin-left: auto;
+  font-size: 2.4vh;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: .7vh 1.4vw;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(27,43,77,.5);
+  white-space: nowrap;
+}
+
+.phase.champ {
+  color: #1a1204;
+  background: linear-gradient(180deg, #ffd76a, var(--gold-deep));
+  border-color: transparent;
+  animation: champPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes champPulse {
+  0%, 100% { box-shadow: 0 0 0 rgba(240,180,41,0); }
+  50%      { box-shadow: 0 0 3.4vh rgba(240,180,41,.55); }
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .3vh;
+  font-size: 1.75vh;
+  color: var(--ink-faint);
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+
+#progress { color: var(--ink-dim); font-weight: 600; }
+
+/* ------------------------------------------------------------ standings */
+.view { min-height: 0; padding: 1.4vh 2.6vw 0; }
+.view.hidden { display: none; }
+
+.col-head, .row {
+  display: grid;
+  grid-template-columns: 8.5vw 1fr 30vw 7vw 12vw;
+  align-items: center;
+  gap: 1vw;
+}
+
+.col-head {
+  font-size: 1.6vh;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  padding: 0 1.2vw 1vh;
+  border-bottom: 1px solid var(--line);
+}
+
+.ch-alive, .ch-score { text-align: right; }
+.ch-picks { text-align: left; }
+
+#page-note {
+  font-style: normal;
+  color: var(--gold);
+  letter-spacing: .12em;
+  margin-left: .8vw;
+}
+
+.phone-only { display: none; }
+
+#standings { list-style: none; position: relative; }
+
+.row {
+  height: var(--row-h);
+  margin-top: .7vh;
+  padding: 0 1.2vw;
+  border-radius: 1.1vh;
+  background: linear-gradient(90deg, var(--navy-700), rgba(19,31,56,.45));
+  border: 1px solid transparent;
+  transition: transform .55s cubic-bezier(.2,.7,.2,1), background .4s, border-color .4s;
+  will-change: transform;
+}
+
+.row.top1 {
+  background: linear-gradient(90deg, rgba(240,180,41,.20), rgba(19,31,56,.5));
+  border-color: rgba(240,180,41,.55);
+}
+.row.top2 { background: linear-gradient(90deg, rgba(150,175,225,.16), rgba(19,31,56,.5)); }
+.row.top3 { background: linear-gradient(90deg, rgba(190,140,80,.16), rgba(19,31,56,.5)); }
+
+.row.bump { animation: bump .9s ease-out; }
+@keyframes bump {
+  0%   { box-shadow: 0 0 0 rgba(55,214,122,0); }
+  25%  { box-shadow: 0 0 2.6vh rgba(55,214,122,.5); }
+  100% { box-shadow: 0 0 0 rgba(55,214,122,0); }
+}
+
+.rank-cell { display: flex; align-items: center; gap: .7vw; }
+
+.rank-num {
+  font-size: 3.5vh;
+  font-weight: 800;
+  min-width: 2.6vw;
+  color: var(--ink);
+}
+.top1 .rank-num { color: var(--gold); }
+
+.move {
+  font-size: 1.6vh;
+  font-weight: 700;
+  letter-spacing: .02em;
+  min-width: 2.4vw;
+}
+.move.up { color: var(--green); }
+.move.down { color: var(--red); }
+.move.flat { color: var(--ink-faint); }
+
+.name {
+  font-size: 3.1vh;
+  font-weight: 650;
+  letter-spacing: .01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.top1 .name { font-size: 3.5vh; font-weight: 750; }
+
+/* pick dots */
+.picks { display: flex; align-items: center; gap: .42vw; }
+
+.pick {
+  position: relative;
+  width: 2.35vw;
+  max-width: 34px;
+  height: 3.5vh;
+  border-radius: .6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45vh;
+  font-weight: 700;
+  letter-spacing: .01em;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.10);
+  color: var(--ink-faint);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pick .abbr { opacity: .95; }
+
+.pick.winners {
+  background: linear-gradient(180deg, rgba(55,214,122,.30), rgba(55,214,122,.13));
+  border-color: rgba(55,214,122,.65);
+  color: #d6ffe8;
+}
+.pick.elimination {
+  background: linear-gradient(180deg, rgba(255,159,28,.28), rgba(255,159,28,.10));
+  border-color: rgba(255,159,28,.6);
+  color: #ffe9c9;
+}
+.pick.out {
+  background: rgba(255,255,255,.035);
+  border-color: rgba(255,255,255,.07);
+  color: #4a5a78;
+  text-decoration: line-through;
+  text-decoration-color: rgba(255,93,93,.5);
+}
+.pick.crown {
+  background: linear-gradient(180deg, #ffd76a, var(--gold-deep));
+  border-color: #ffe08a;
+  color: #1a1204;
+}
+.pick.r1 { box-shadow: inset 0 -.35vh 0 rgba(255,255,255,.35); }
+
+.alive {
+  text-align: right;
+  font-size: 2.3vh;
+  font-weight: 700;
+  color: var(--ink-dim);
+}
+.alive .of { color: var(--ink-faint); font-weight: 500; font-size: 1.7vh; }
+
+.score {
+  text-align: right;
+  font-size: 4.2vh;
+  font-weight: 800;
+  letter-spacing: -.01em;
+}
+.top1 .score { color: var(--gold); font-size: 4.6vh; }
+
+/* ----------------------------------------------------------- team board */
+.teams-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4vw;
+  height: 100%;
+  padding-bottom: 1vh;
+}
+
+.side { display: flex; flex-direction: column; min-height: 0; }
+
+.side-title {
+  font-size: 2.4vh;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  padding-bottom: 1vh;
+  margin-bottom: 1.2vh;
+  border-bottom: 2px solid var(--line);
+}
+.side-title.us { color: var(--us); }
+.side-title.intl { color: var(--intl); }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .9vh .9vw;
+  align-content: start;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .3vh .6vw;
+  padding: .9vh 1vw;
+  border-radius: 1vh;
+  background: var(--navy-700);
+  border-left: .45vw solid var(--ink-faint);
+  min-height: 7.2vh;
+}
+
+.team.winners { border-left-color: var(--green); }
+.team.elimination { border-left-color: var(--amber); }
+.team.eliminated { border-left-color: #37456b; opacity: .55; }
+.team.side_champion, .team.world_champion {
+  border-left-color: var(--gold);
+  background: linear-gradient(90deg, rgba(240,180,41,.18), var(--navy-700));
+}
+
+.team-name {
+  font-size: 2.35vh;
+  font-weight: 650;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-pts {
+  font-size: 2.6vh;
+  font-weight: 800;
+  color: var(--gold);
+  justify-self: end;
+}
+.team.eliminated .team-pts { color: var(--ink-faint); }
+
+.team-region {
+  grid-column: 1 / -1;
+  font-size: 1.35vh;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: -.2vh;
+}
+
+.team-status {
+  grid-column: 1 / -1;
+  font-size: 1.55vh;
+  color: var(--ink-dim);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-picked {
+  grid-column: 1 / -1;
+  font-size: 1.45vh;
+  color: var(--ink-faint);
+}
+.team-picked b { color: var(--ink-dim); font-weight: 700; }
+
+/* --------------------------------------------------------------- ticker */
+#ticker {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+  padding: 0 2.6vw;
+  border-top: 1px solid var(--line);
+  background: linear-gradient(0deg, var(--navy-800), rgba(13,21,38,.3));
+}
+
+.tick-block {
+  display: flex;
+  align-items: baseline;
+  gap: .9vw;
+  min-width: 0;
+}
+.tick-block:first-child { flex: 1.15; }
+.tick-block:nth-child(2) { flex: 1; }
+
+.tick-label {
+  font-size: 1.5vh;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--navy-900);
+  background: var(--gold);
+  padding: .5vh .8vw;
+  border-radius: .5vh;
+  white-space: nowrap;
+}
+
+.tick-body {
+  font-size: 2.2vh;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tick-body .win { font-weight: 750; }
+.tick-body .dim { color: var(--ink-faint); }
+
+.tick-dots { display: flex; gap: .6vw; margin-left: auto; }
+.vdot {
+  width: 1vh; height: 1vh; border-radius: 50%;
+  background: var(--ink-faint); opacity: .4;
+}
+.vdot.on { background: var(--gold); opacity: 1; }
+
+/* --------------------------------------------------------------- phones
+   Compact layout for narrow screens AND for short ones: a phone held
+   landscape is wide but only ~375px tall, where vh-scaled type collapses. */
+@media (max-aspect-ratio: 5/4), (max-height: 620px) {
+  html, body { height: auto; min-height: 100%; overflow: visible; }
+  #stage { height: auto; min-height: 100vh; grid-template-rows: auto 1fr auto; }
+  :root { --row-h: auto; }
+
+  #topbar { flex-wrap: wrap; gap: .6rem 1rem; padding: .8rem 1rem; }
+  .brand-mark { font-size: 1.7rem; }
+  .brand-name { font-size: .8rem; }
+  .phase { font-size: .8rem; padding: .3rem .7rem; }
+  .meta { font-size: .7rem; }
+
+  .view { padding: .8rem 1rem 0; }
+  .col-head { display: none; }
+
+  .row {
+    grid-template-columns: 3.2rem 1fr auto;
+    grid-template-areas: "rank name score" "rank picks score";
+    height: auto;
+    padding: .7rem .8rem;
+    gap: .25rem .6rem;
+    margin-top: .5rem;
+  }
+  .rank-cell { grid-area: rank; flex-direction: column; align-items: flex-start; gap: 0; }
+  .rank-num, .top1 .rank-num { font-size: 1.5rem; }
+  .move { font-size: .7rem; }
+  .name, .top1 .name { grid-area: name; font-size: 1.05rem; }
+  .picks { grid-area: picks; flex-wrap: wrap; gap: .2rem; }
+  .pick { width: 2.1rem; max-width: none; height: 1.5rem; font-size: .6rem; }
+  .alive { display: none; }
+  .score, .top1 .score { grid-area: score; font-size: 1.6rem; align-self: center; }
+
+  .phone-only { display: block; }
+
+  .section-head {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    padding-top: 1.4rem;
+    margin-bottom: .8rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .teams-wrap { grid-template-columns: 1fr; gap: 1.2rem; }
+  .side-title { font-size: 1rem; }
+  .team-grid { grid-template-columns: 1fr 1fr; gap: .5rem; }
+  .team { min-height: 0; padding: .5rem .6rem; border-left-width: .3rem; }
+  .team-name { font-size: .9rem; }
+  .team-pts { font-size: 1rem; }
+  .team-status, .team-picked { font-size: .68rem; }
+  .team-region { font-size: .58rem; }
+
+  #ticker { flex-direction: column; align-items: flex-start; gap: .5rem; padding: .8rem 1rem; }
+  .tick-block { width: 100%; }
+  .tick-label { font-size: .6rem; padding: .2rem .5rem; }
+  .tick-body { font-size: .85rem; white-space: normal; }
+  .tick-dots { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
