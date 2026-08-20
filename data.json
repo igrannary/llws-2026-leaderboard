@@ -1,7 +1,7 @@
 {
  "timezone": "PT",
- "generated_at": "2026-08-19T19:10:34",
- "generated_display": "Aug 19, 7:10 PM",
+ "generated_at": "2026-08-19T19:55:02",
+ "generated_display": "Aug 19, 7:55 PM",
  "games_played": 4,
  "games_total": 38,
  "champion": null,
@@ -105,7 +105,7 @@
    "rank": 2,
    "name": "Felipe De Paula",
    "total": 17,
-   "movement": 11,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -195,7 +195,7 @@
    "rank": 3,
    "name": "Abby Gubbels",
    "total": 14,
-   "movement": 4,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -285,7 +285,7 @@
    "rank": 3,
    "name": "Josh Hilverda",
    "total": 14,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -375,7 +375,7 @@
    "rank": 3,
    "name": "Phil Paterson",
    "total": 14,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -465,7 +465,7 @@
    "rank": 3,
    "name": "Tom Knoll",
    "total": 14,
-   "movement": 4,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -555,7 +555,7 @@
    "rank": 7,
    "name": "Barry Rosenblood",
    "total": 13,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -645,7 +645,7 @@
    "rank": 7,
    "name": "Jaden Hanna",
    "total": 13,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -735,7 +735,7 @@
    "rank": 9,
    "name": "Jonathan Loewen",
    "total": 11,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -825,7 +825,7 @@
    "rank": 10,
    "name": "Andrew Mallon",
    "total": 10,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -915,7 +915,7 @@
    "rank": 10,
    "name": "Miles Campbell",
    "total": 10,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1005,7 +1005,7 @@
    "rank": 12,
    "name": "Jazz Shields",
    "total": 9,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1095,7 +1095,7 @@
    "rank": 13,
    "name": "Jim Rowland",
    "total": 8,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1185,7 +1185,7 @@
    "rank": 14,
    "name": "Steven Huzzey",
    "total": 7,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
