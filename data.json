@@ -1,7 +1,7 @@
 {
  "timezone": "PT",
- "generated_at": "2026-08-19T16:40:02",
- "generated_display": "Aug 19, 4:40 PM",
+ "generated_at": "2026-08-19T19:07:09",
+ "generated_display": "Aug 19, 7:07 PM",
  "games_played": 3,
  "games_total": 38,
  "champion": null,
@@ -105,7 +105,7 @@
    "rank": 2,
    "name": "Josh Hilverda",
    "total": 14,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -195,7 +195,7 @@
    "rank": 2,
    "name": "Phil Paterson",
    "total": 14,
-   "movement": 2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -285,7 +285,7 @@
    "rank": 4,
    "name": "Barry Rosenblood",
    "total": 13,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -375,7 +375,7 @@
    "rank": 4,
    "name": "Jaden Hanna",
    "total": 13,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -465,7 +465,7 @@
    "rank": 6,
    "name": "Jonathan Loewen",
    "total": 11,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -555,7 +555,7 @@
    "rank": 7,
    "name": "Abby Gubbels",
    "total": 10,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -645,7 +645,7 @@
    "rank": 7,
    "name": "Andrew Mallon",
    "total": 10,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -735,7 +735,7 @@
    "rank": 7,
    "name": "Miles Campbell",
    "total": 10,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -825,7 +825,7 @@
    "rank": 7,
    "name": "Tom Knoll",
    "total": 10,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -915,7 +915,7 @@
    "rank": 11,
    "name": "Jazz Shields",
    "total": 9,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1005,7 +1005,7 @@
    "rank": 12,
    "name": "Jim Rowland",
    "total": 8,
-   "movement": -4,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1095,7 +1095,7 @@
    "rank": 13,
    "name": "Felipe De Paula",
    "total": 7,
-   "movement": -12,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1185,7 +1185,7 @@
    "rank": 13,
    "name": "Steven Huzzey",
    "total": 7,
-   "movement": -5,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1275,7 +1275,7 @@
    "rank": 15,
    "name": "Ian Grannary",
    "total": 4,
-   "movement": -7,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1365,7 +1365,7 @@
    "rank": 16,
    "name": "Brett 'The Oracle' Blair",
    "total": 0,
-   "movement": -8,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
