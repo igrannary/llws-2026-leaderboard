@@ -3,12 +3,41 @@
 
    URL options:  ?view=standings|teams   pin a single view
                  ?rotate=20              seconds per view (default 14)
-   Keyboard:     Space pauses rotation, Left/Right switch views. */
+                 ?safe=4                 overscan inset, percent
+                 ?rows=8                 force rows per standings page
+                 ?debug=1                overlay what this screen reports
+   Keyboard:     Space pauses rotation, Left/Right switch views,
+                 [ and ] fit the picture to the TV, 0 resets.
+
+   COMPATIBILITY: the office TV is driven by a BrightSign player, whose
+   firmware carries an older Chromium than a desktop browser. Nothing here
+   uses optional chaining, nullish coalescing or flexbox gap - all of which
+   are Chromium 80/84 features, and the first two of which would fail to
+   parse and take the whole page down rather than degrade. Keep it that way. */
 
 const params = new URLSearchParams(location.search);
 const ROTATE_OVERRIDE = parseFloat(params.get('rotate'));
 const REFRESH_MS = 60000;
 const PINNED = params.get('view');
+const ROWS_OVERRIDE = parseInt(params.get('rows'), 10) || 0;
+const DEBUG = params.get('debug') === '1';
+
+/* ------------------------------------------------------- surviving a reload
+   A signage player reloads the page on its own schedule, and BrightAuthor's
+   default is often shorter than one full rotation. Starting from view 0
+   every time means the later screens are never reached: the room sees page
+   one of the standings and nothing else, no matter how long the TV is on.
+
+   So the last screen shown is remembered, and a fresh load picks up at the
+   NEXT one. However often the player reloads, the whole rotation still gets
+   seen. */
+const VIEW_KEY = 'llws-view-index';
+let resumeFrom = 0;
+try {
+  const stored = parseInt(localStorage.getItem(VIEW_KEY), 10);
+  if (!isNaN(stored)) resumeFrom = stored + 1;
+} catch (e) { /* storage disabled on this player; start at the top */ }
+let seeded = false;
 
 /* ----------------------------------------------------------------- overscan
    Televisions crop the edges of an HDMI signal, typically 2-5% a side, which
@@ -134,45 +163,76 @@ function render(data) {
   renderTeams(data);
   renderTicker(data);
   fitStandings(data);
+  renderDebug(data);
 }
 
-/* Nothing may hide behind the ticker on a TV: shrink the page until it fits. */
-function fitStandings(data, guard = 0) {
-  if (isNarrow() || guard > 4) return;
-  const rows = [...document.querySelectorAll('#standings .row')];
-  if (rows.length < 2) return;
-  const bottom = rows[rows.length - 1].getBoundingClientRect().bottom;
-  const limit = $('#ticker').getBoundingClientRect().top;
-  if (bottom <= limit + 1) return;
-  pageSize = Math.max(4, pageSize - 1);
+/* Rebuild the view list around the current pageSize, keeping the screen the
+   operator is looking at. */
+function repaginate(data) {
   const pages = Math.max(1, Math.ceil(data.standings.length / pageSize));
   const current = VIEWS[viewIndex];
   VIEWS = [];
   for (let p = 0; p < pages; p++) VIEWS.push({ kind: 'standings', page: p });
   VIEWS.push({ kind: 'teams' });
   viewIndex = Math.min(viewIndex, VIEWS.length - 1);
-  if (current?.kind === 'teams') viewIndex = VIEWS.length - 1;
+  if (current && current.kind === 'teams') viewIndex = VIEWS.length - 1;
   showView(viewIndex);
   renderStandings(data);
+}
+
+/* Nothing may hide behind the ticker on a TV.
+
+   This measures what the browser actually did rather than trusting the
+   estimate, because an unfamiliar player can lay out differently: it reads
+   the real distance between two rows and works out how many genuinely fit.
+   The old version stepped down one row at a time and gave up after four,
+   which on a screen that needed six steps left rows stranded off the bottom
+   with no way to reach them. */
+function fitStandings(data, guard = 0) {
+  if (isNarrow() || guard > 12) return;
+  const rows = [].slice.call(document.querySelectorAll('#standings .row'));
+  if (rows.length < 2) return;
+  const limit = $('#ticker').getBoundingClientRect().top;
+  const first = rows[0].getBoundingClientRect();
+  const last = rows[rows.length - 1].getBoundingClientRect();
+  if (last.bottom <= limit + 1) return;
+
+  const pitch = rows[1].getBoundingClientRect().top - first.top;
+  const canFit = pitch > 0
+    ? Math.max(1, Math.floor((limit - first.top) / pitch))
+    : pageSize - 1;
+  const next = Math.max(1, Math.min(canFit, pageSize - 1));
+  if (next === pageSize) return;
+  pageSize = next;
+  repaginate(data);
   fitStandings(data, guard + 1);
 }
 
 /* How many rows fit above the ticker at this viewport, and what pages follow. */
+function rowsThatFit(n) {
+  const avail = $('#ticker').getBoundingClientRect().top
+                - $('#standings').getBoundingClientRect().top - 4;
+  const vh = window.innerHeight / 100;
+  // Nominal row height from CSS, never a measured one: rows stretch to fill
+  // the column, so measuring them here would feed their own stretch back into
+  // the count and oscillate.
+  const declared = getComputedStyle(document.documentElement)
+                     .getPropertyValue('--row-h').trim();
+  const preferredH = ((parseFloat(declared) || 7.5) + 0.62) * vh;
+  // .row min-height + margin: the most that can be crammed in before rows
+  // start disappearing behind the ticker.
+  const floorH = (5.6 + 0.62) * vh;
+  const hardMax = Math.max(1, Math.floor(avail / floorH));
+  const preferred = Math.max(1, Math.floor(avail / preferredH));
+  return Math.max(1, Math.min(preferred, hardMax, Math.max(n, 1)));
+}
+
 function rebuildViews(data) {
   const n = data.standings.length;
   if (isNarrow()) {
     pageSize = n || 1;
   } else {
-    // Nominal row height from CSS, never a measured one: rows now stretch to
-    // fill the column, so measuring them would feed their own stretch back
-    // into the count and oscillate.
-    const declared = getComputedStyle(document.documentElement)
-                       .getPropertyValue('--row-h').trim();
-    const nominalVh = parseFloat(declared) || 7.5;
-    const rowH = window.innerHeight * (nominalVh + 0.62) / 100;
-    const avail = $('#ticker').getBoundingClientRect().top
-                  - $('#standings').getBoundingClientRect().top - 4;
-    pageSize = Math.max(6, Math.floor(avail / rowH));
+    pageSize = ROWS_OVERRIDE || rowsThatFit(n);
   }
   const pages = Math.max(1, Math.ceil((n || 1) / pageSize));
   const next = [];
@@ -183,9 +243,13 @@ function rebuildViews(data) {
   VIEWS = next;
   if (PINNED === 'teams') viewIndex = VIEWS.length - 1;
   else if (PINNED === 'standings') viewIndex = 0;
-  else {
-    const same = VIEWS.findIndex(v => v.kind === current?.kind &&
-                                      v.page === current?.page);
+  else if (!seeded) {
+    // First paint after a load: carry on from wherever the last load stopped.
+    viewIndex = ((resumeFrom % VIEWS.length) + VIEWS.length) % VIEWS.length;
+    seeded = true;
+  } else {
+    const same = VIEWS.findIndex(v => current && v.kind === current.kind &&
+                                      v.page === current.page);
     viewIndex = same >= 0 ? same : 0;
   }
   showView(viewIndex);
@@ -277,7 +341,8 @@ function renderStandings(data) {
 
     const score = el('div', 'score');
     row.append(score);
-    countUp(score, lastTotals.get(r.name) ?? r.total, r.total);
+    countUp(score, lastTotals.has(r.name) ? lastTotals.get(r.name) : r.total,
+            r.total);
     if (lastTotals.has(r.name) && lastTotals.get(r.name) !== r.total) {
       row.classList.add('bump');
     }
@@ -339,6 +404,44 @@ function renderTeams(data) {
     });
 }
 
+/* What this particular screen reports about itself. The office TV is a
+   BrightSign and behaves differently from any browser here, so rather than
+   guess, ?debug=1 puts the numbers on the screen to be read off. */
+function renderDebug(data) {
+  if (!DEBUG) return;
+  let box = $('#debug-box');
+  if (!box) {
+    box = el('div');
+    box.id = 'debug-box';
+    document.body.appendChild(box);
+  }
+  const rows = document.querySelectorAll('#standings .row');
+  const pitch = rows.length > 1
+    ? Math.round(rows[1].getBoundingClientRect().top -
+                 rows[0].getBoundingClientRect().top)
+    : 0;
+  const supports = (prop, val) => {
+    try { return window.CSS && CSS.supports && CSS.supports(prop, val); }
+    catch (e) { return 'n/a'; }
+  };
+  const avail = Math.round($('#ticker').getBoundingClientRect().top
+                           - $('#standings').getBoundingClientRect().top);
+  box.innerHTML = [
+    'viewport ' + window.innerWidth + ' x ' + window.innerHeight +
+      '  dpr ' + (window.devicePixelRatio || 1),
+    'entries ' + data.standings.length + '   rows/page ' + pageSize +
+      '   rendered ' + rows.length + '   views ' + VIEWS.length +
+      '   showing ' + (viewIndex + 1),
+    'space above ticker ' + avail + 'px   row pitch ' + pitch + 'px',
+    'resumed at view ' + resumeFrom + '   rotating every ' +
+      Math.round(rotateMs() / 1000) + 's' + (paused ? ' (paused)' : ''),
+    'flex gap ' + supports('row-gap', '1px') +
+      '   clip-path ' + supports('clip-path', 'polygon(0 0, 1px 0, 0 1px)') +
+      '   css vars ' + supports('--x', '1px'),
+    navigator.userAgent
+  ].join('<br>');
+}
+
 function renderTicker(data) {
   const latest = data.recent[0];
   $('#tick-latest').innerHTML = latest
@@ -372,6 +475,9 @@ function fmtWhen(iso, time, tz) {
 /* ------------------------------------------------------------- rotation */
 function showView(i) {
   viewIndex = (i + VIEWS.length) % VIEWS.length;
+  if (!PINNED) {
+    try { localStorage.setItem(VIEW_KEY, viewIndex); } catch (e) {}
+  }
   const view = VIEWS[viewIndex];
   if (isNarrow()) {
     // On a phone nothing rotates: both sections stack and the page scrolls,

@@ -1,4 +1,12 @@
 /* LLWS 2026 Office Pool - broadcast leaderboard.
+
+   NO FLEXBOX `gap` ANYWHERE IN HERE. The office TV is driven by a BrightSign
+   player, and BrightSign firmware ships an older Chromium: flex `gap` only
+   arrived in Chromium 84, and before that it is ignored silently - every
+   flex gap collapses to nothing and the layout quietly falls apart. Grid gap
+   is fine (Chromium 57) and is used freely. Flex spacing is done with margins
+   so it works on every engine.
+
    Built for a 1920x1080 office TV, read from across the room, and scaled off
    the viewport so nothing ever scrolls or clips.
 
@@ -92,7 +100,6 @@ body::after {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 2vw;
   height: 10.2vh;
   padding: 0 1.6vw 0 0;
   background: linear-gradient(100deg,
@@ -115,9 +122,9 @@ body::after {
 .brand {
   display: flex;
   align-items: baseline;
-  gap: .85vw;
   padding-left: 2.4vw;
 }
+.brand-name { margin-left: .85vw; }
 
 .brand-mark {
   font-size: 5.2vh;
@@ -167,7 +174,7 @@ body::after {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: .25vh;
+  margin-left: 2vw;
   font-size: 1.7vh;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -175,6 +182,7 @@ body::after {
   white-space: nowrap;
 }
 #progress { color: var(--gold); font-weight: 700; letter-spacing: .12em; }
+#updated { margin-top: .25vh; }
 
 /* ================================================================ standings */
 .view { min-height: 0; display: flex; flex-direction: column; }
@@ -216,8 +224,10 @@ body::after {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: .62vh;
   padding-top: .62vh;
+  /* A miscount on an unfamiliar player clips cleanly instead of spilling
+     rows out over the ticker. */
+  overflow: hidden;
 }
 
 .row {
@@ -225,9 +235,10 @@ body::after {
   /* Grow to share out whatever height the page has, within readable bounds:
      eight entries should not look like a half-empty screen, and four should
      not become billboards. */
-  flex: 1 1 var(--row-h);
+  flex: 1 1 auto;
   min-height: 5.6vh;
   max-height: 9.6vh;
+  margin-bottom: .62vh;
   padding: 0 1.3vw;
   border-radius: .8vh;
   background: linear-gradient(96deg,
@@ -279,7 +290,8 @@ body::after {
   to   { transform: translateX(100%); }
 }
 
-.rank-cell { display: flex; align-items: center; gap: .6vw; }
+.rank-cell { display: flex; align-items: center; }
+.rank-cell .move { margin-left: .6vw; }
 
 /* Angled medallion - the most broadcast-looking element on the page. */
 .rank-num {
@@ -323,7 +335,8 @@ body::after {
 .top1 .name { font-size: 3.5vh; font-weight: 700; }
 
 /* ---------------------------------------------------------------- picks */
-.picks { display: flex; align-items: center; gap: .4vw; }
+.picks { display: flex; align-items: center; }
+.pick + .pick { margin-left: .4vw; }
 
 .pick {
   position: relative;
@@ -514,7 +527,6 @@ body::after {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 1.7vw;
   height: 8vh;
   padding: 0 1.6vw 0 0;
   background: linear-gradient(90deg, var(--navy-700), var(--navy-800) 60%, rgba(11,18,34,.4));
@@ -533,11 +545,11 @@ body::after {
 .tick-block {
   display: flex;
   align-items: center;
-  gap: .9vw;
   min-width: 0;
 }
+.tick-block .tick-body { margin-left: .9vw; }
 .tick-block:first-child { flex: 1.15; padding-left: 2.4vw; }
-.tick-block:nth-child(2) { flex: 1.3; }
+.tick-block:nth-child(2) { flex: 1.3; margin-left: 1.7vw; }
 
 /* Skewed label chip - the lower-third convention. */
 .tick-label {
@@ -565,13 +577,35 @@ body::after {
 .tick-body .win { font-weight: 700; color: var(--gold); }
 .tick-body .dim { color: var(--ink-faint); font-weight: 400; }
 
-.tick-dots { display: flex; gap: .55vw; margin-left: auto; flex: none; }
+.tick-dots { display: flex; margin-left: auto; flex: none; }
+.vdot + .vdot { margin-left: .55vw; }
 .vdot {
   width: .95vh; height: .95vh; border-radius: 50%;
   background: var(--ink-faint); opacity: .35;
   transition: background .3s, opacity .3s;
 }
 .vdot.on { background: var(--gold); opacity: 1; }
+
+/* =================================================================== debug
+   ?debug=1 only. Reads out what this screen reports about itself, so an
+   unfamiliar player (the office BrightSign) can be diagnosed from a photo
+   rather than guessed at. */
+#debug-box {
+  position: fixed;
+  z-index: 9;
+  left: 1vw;
+  bottom: 1vh;
+  max-width: 70vw;
+  padding: 1vh 1.4vw;
+  background: rgba(4,7,15,.93);
+  border: 1px solid var(--green);
+  border-radius: .6vh;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 1.5vh;
+  line-height: 1.5;
+  color: var(--green);
+  word-break: break-all;
+}
 
 /* ============================================================ safe-area HUD
    Shown while the operator nudges the inset with [ and ]. */
@@ -627,14 +661,14 @@ body::after {
   #topbar {
     height: auto;
     flex-wrap: wrap;
-    gap: .5rem 1rem;
     padding: .9rem 1rem .9rem 0;
     border-radius: 0;
   }
+  #topbar > * { margin-bottom: .5rem; }
   /* margin-left:auto pins the phase pill to the right on a TV; on a phone it
      has to be allowed to fall onto the next line instead. */
-  .phase { margin-left: 0; }
-  .meta { align-items: flex-start; }
+  .phase { margin-left: 0; margin-right: 1rem; }
+  .meta { align-items: flex-start; margin-left: 0; }
   #topbar::before { width: .5rem; }
   .brand { padding-left: 1.2rem; }
   .brand-mark { font-size: 1.8rem; }
@@ -654,14 +688,17 @@ body::after {
     padding: .7rem .8rem .7rem 1rem;
     gap: .3rem .6rem;
   }
-  #standings { display: block; padding-top: 0; }
-  #standings .row { margin-top: .5rem; }
+  #standings { display: block; padding-top: 0; overflow: visible; }
+  #standings .row { margin-top: .5rem; margin-bottom: 0; }
   .row::before { width: .28rem; }
-  .rank-cell { grid-area: rank; flex-direction: column; align-items: flex-start; gap: .1rem; }
+  .rank-cell { grid-area: rank; flex-direction: column; align-items: flex-start; }
+  .rank-cell .move { margin-left: 0; margin-top: .1rem; }
   .rank-num { width: 2.5rem; height: 2rem; font-size: 1.25rem; }
   .move { font-size: .7rem; min-width: 0; }
   .name, .top1 .name { grid-area: name; font-size: 1.05rem; }
-  .picks { grid-area: picks; flex-wrap: wrap; gap: .22rem; min-width: 0; }
+  .picks { grid-area: picks; flex-wrap: wrap; min-width: 0; }
+  .picks .pick { margin: 0 .22rem .22rem 0; }
+  .pick + .pick { margin-left: 0; }
   .name, .top1 .name { min-width: 0; }
   .pick { width: 2.15rem; max-width: none; height: 1.5rem; font-size: .6rem; }
   .pick.r1::after { height: 2px; }
@@ -693,10 +730,11 @@ body::after {
   #ticker {
     height: auto;
     flex-wrap: wrap;
-    gap: .5rem 1rem;
     padding: .8rem 1rem .8rem 0;
     border-radius: 0;
   }
+  #ticker .tick-block { margin-bottom: .5rem; }
+  .tick-block:nth-child(2) { margin-left: 0; }
   #ticker::before { width: .5rem; }
   .tick-block:first-child { padding-left: 1.2rem; }
   .tick-block { flex: 1 1 100%; }
