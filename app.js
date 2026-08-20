@@ -31,6 +31,35 @@ const DEBUG = params.get('debug') === '1';
    So the last screen shown is remembered, and a fresh load picks up at the
    NEXT one. However often the player reloads, the whole rotation still gets
    seen. */
+/* ------------------------------------------------------ running stale code
+   A signage player can hold on to a cached app.js long after a deploy, which
+   shows the room fresh scores rendered by old code - data.json is fetched
+   with a unique ?t= every time, the script is not. The script can tell: it
+   reads the version off its own tag and compares it with the version in
+   data.json, which is always current. On a mismatch it reloads once through
+   a URL the player has never seen, which pulls a fresh index.html and with it
+   fresh script and stylesheet URLs.
+
+   The guard is the URL itself rather than storage, so there is no way to get
+   into a reload loop on a player where storage does not persist. */
+const MY_BUILD = (function () {
+  const tags = document.getElementsByTagName('script');
+  for (let i = 0; i < tags.length; i++) {
+    const m = /app\.js\?v=([A-Za-z0-9]+)/.exec(tags[i].src || '');
+    if (m) return m[1];
+  }
+  return '';
+})();
+
+function reloadIfStale(data) {
+  if (!data.build || !MY_BUILD || data.build === MY_BUILD) return false;
+  if (params.get('cb') === data.build) return false;   // already tried this one
+  const next = new URLSearchParams(location.search);
+  next.set('cb', data.build);
+  location.replace(location.pathname + '?' + next.toString());
+  return true;
+}
+
 const VIEW_KEY = 'llws-view-index';
 let resumeFrom = 0;
 try {
@@ -156,6 +185,7 @@ async function load() {
 
 /* ------------------------------------------------------------- rendering */
 function render(data) {
+  if (reloadIfStale(data)) return;
   currentData = data;
   renderHeader(data);
   rebuildViews(data);

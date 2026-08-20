@@ -3,8 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- GitHub Pages serves everything with max-age=600 and ignores _headers,
+     so this markup is the only cache instruction a signage player gets.
+     Belt and braces: the asset URLs are content-versioned as well, and
+     app.js reloads itself if it notices it is running an old build. -->
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
 <title>LLWS 2026 Office Pool</title>
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=9d7b801e">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127934;</text></svg>">
 </head>
 <body>
@@ -64,6 +70,6 @@
 <!-- Shown only while someone is fitting the picture to the TV with [ and ]. -->
 <div id="safe-hud"></div>
 
-<script src="app.js?v=4"></script>
+<script src="app.js?v=9d7b801e"></script>
 </body>
 </html>
