@@ -1,8 +1,8 @@
 {
  "timezone": "PT",
- "generated_at": "2026-08-19T19:07:09",
- "generated_display": "Aug 19, 7:07 PM",
- "games_played": 3,
+ "generated_at": "2026-08-19T19:10:34",
+ "generated_display": "Aug 19, 7:10 PM",
+ "games_played": 4,
  "games_total": 38,
  "champion": null,
  "champion_display": null,
@@ -14,7 +14,7 @@
   {
    "rank": 1,
    "name": "Jean-Francois C\u00f4t\u00e9",
-   "total": 17,
+   "total": 22,
    "movement": 0,
    "alive": 8,
    "picks": [
@@ -73,8 +73,8 @@
      "team": "Metro",
      "display": "New Jersey",
      "abbr": "NJ",
-     "points": 0,
-     "contribution": 0,
+     "points": 1,
+     "contribution": 5,
      "state": "winners",
      "alive": true
     },
@@ -103,9 +103,189 @@
   },
   {
    "rank": 2,
+   "name": "Felipe De Paula",
+   "total": 17,
+   "movement": 11,
+   "alive": 8,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Metro",
+     "display": "New Jersey",
+     "abbr": "NJ",
+     "points": 1,
+     "contribution": 10,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 2,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 3,
+     "team": "Panama",
+     "display": "Panama",
+     "abbr": "PAN",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 4,
+     "team": "Northwest",
+     "display": "Washington",
+     "abbr": "WA",
+     "points": 1,
+     "contribution": 7,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 5,
+     "team": "Mexico",
+     "display": "Mexico",
+     "abbr": "MEX",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 6,
+     "team": "Caribbean",
+     "display": "Dominican Republic",
+     "abbr": "DOM",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 7,
+     "team": "Mid-Atlantic",
+     "display": "Pennsylvania",
+     "abbr": "PA",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 8,
+     "team": "Midwest",
+     "display": "Iowa",
+     "abbr": "IA",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    }
+   ],
+   "tb_final_runs": 10
+  },
+  {
+   "rank": 3,
+   "name": "Abby Gubbels",
+   "total": 14,
+   "movement": 4,
+   "alive": 8,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 1,
+     "contribution": 10,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 2,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 3,
+     "team": "Caribbean",
+     "display": "Dominican Republic",
+     "abbr": "DOM",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 4,
+     "team": "Southwest",
+     "display": "Texas",
+     "abbr": "TX",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 5,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 6,
+     "team": "Mexico",
+     "display": "Mexico",
+     "abbr": "MEX",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 7,
+     "team": "Metro",
+     "display": "New Jersey",
+     "abbr": "NJ",
+     "points": 1,
+     "contribution": 4,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 8,
+     "team": "Southeast",
+     "display": "Alabama",
+     "abbr": "AL",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    }
+   ],
+   "tb_final_runs": 7
+  },
+  {
+   "rank": 3,
    "name": "Josh Hilverda",
    "total": 14,
-   "movement": 0,
+   "movement": -1,
    "alive": 8,
    "picks": [
     {
@@ -192,10 +372,10 @@
    "tb_final_runs": 9
   },
   {
-   "rank": 2,
+   "rank": 3,
    "name": "Phil Paterson",
    "total": 14,
-   "movement": 0,
+   "movement": -1,
    "alive": 8,
    "picks": [
     {
@@ -282,10 +462,100 @@
    "tb_final_runs": 7
   },
   {
-   "rank": 4,
+   "rank": 3,
+   "name": "Tom Knoll",
+   "total": 14,
+   "movement": 4,
+   "alive": 8,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 1,
+     "contribution": 10,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 2,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 3,
+     "team": "Mountain",
+     "display": "Nevada",
+     "abbr": "NV",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 4,
+     "team": "Mexico",
+     "display": "Mexico",
+     "abbr": "MEX",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 5,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 6,
+     "team": "Curacao",
+     "display": "Curacao",
+     "abbr": "CUW",
+     "points": 0,
+     "contribution": 0,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 7,
+     "team": "Metro",
+     "display": "New Jersey",
+     "abbr": "NJ",
+     "points": 1,
+     "contribution": 4,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 8,
+     "team": "Southeast",
+     "display": "Alabama",
+     "abbr": "AL",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    }
+   ],
+   "tb_final_runs": 8
+  },
+  {
+   "rank": 7,
    "name": "Barry Rosenblood",
    "total": 13,
-   "movement": 0,
+   "movement": -3,
    "alive": 8,
    "picks": [
     {
@@ -372,10 +642,10 @@
    "tb_final_runs": 13
   },
   {
-   "rank": 4,
+   "rank": 7,
    "name": "Jaden Hanna",
    "total": 13,
-   "movement": 0,
+   "movement": -3,
    "alive": 8,
    "picks": [
     {
@@ -462,10 +732,10 @@
    "tb_final_runs": 9
   },
   {
-   "rank": 6,
+   "rank": 9,
    "name": "Jonathan Loewen",
    "total": 11,
-   "movement": 0,
+   "movement": -3,
    "alive": 8,
    "picks": [
     {
@@ -552,100 +822,10 @@
    "tb_final_runs": 7
   },
   {
-   "rank": 7,
-   "name": "Abby Gubbels",
-   "total": 10,
-   "movement": 0,
-   "alive": 8,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 1,
-     "contribution": 10,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 2,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "Caribbean",
-     "display": "Dominican Republic",
-     "abbr": "DOM",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 4,
-     "team": "Southwest",
-     "display": "Texas",
-     "abbr": "TX",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 5,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 6,
-     "team": "Mexico",
-     "display": "Mexico",
-     "abbr": "MEX",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 7,
-     "team": "Metro",
-     "display": "New Jersey",
-     "abbr": "NJ",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 8,
-     "team": "Southeast",
-     "display": "Alabama",
-     "abbr": "AL",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    }
-   ],
-   "tb_final_runs": 7
-  },
-  {
-   "rank": 7,
+   "rank": 10,
    "name": "Andrew Mallon",
    "total": 10,
-   "movement": 0,
+   "movement": -3,
    "alive": 8,
    "picks": [
     {
@@ -732,10 +912,10 @@
    "tb_final_runs": 9
   },
   {
-   "rank": 7,
+   "rank": 10,
    "name": "Miles Campbell",
    "total": 10,
-   "movement": 0,
+   "movement": -3,
    "alive": 8,
    "picks": [
     {
@@ -822,100 +1002,10 @@
    "tb_final_runs": 9
   },
   {
-   "rank": 7,
-   "name": "Tom Knoll",
-   "total": 10,
-   "movement": 0,
-   "alive": 8,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 1,
-     "contribution": 10,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 2,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "Mountain",
-     "display": "Nevada",
-     "abbr": "NV",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 4,
-     "team": "Mexico",
-     "display": "Mexico",
-     "abbr": "MEX",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 5,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 6,
-     "team": "Curacao",
-     "display": "Curacao",
-     "abbr": "CUW",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 7,
-     "team": "Metro",
-     "display": "New Jersey",
-     "abbr": "NJ",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 8,
-     "team": "Southeast",
-     "display": "Alabama",
-     "abbr": "AL",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    }
-   ],
-   "tb_final_runs": 8
-  },
-  {
-   "rank": 11,
+   "rank": 12,
    "name": "Jazz Shields",
    "total": 9,
-   "movement": 0,
+   "movement": -1,
    "alive": 8,
    "picks": [
     {
@@ -1002,10 +1092,10 @@
    "tb_final_runs": 9
   },
   {
-   "rank": 12,
+   "rank": 13,
    "name": "Jim Rowland",
    "total": 8,
-   "movement": 0,
+   "movement": -1,
    "alive": 8,
    "picks": [
     {
@@ -1092,100 +1182,10 @@
    "tb_final_runs": 7
   },
   {
-   "rank": 13,
-   "name": "Felipe De Paula",
-   "total": 7,
-   "movement": 0,
-   "alive": 8,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Metro",
-     "display": "New Jersey",
-     "abbr": "NJ",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 2,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "Panama",
-     "display": "Panama",
-     "abbr": "PAN",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 4,
-     "team": "Northwest",
-     "display": "Washington",
-     "abbr": "WA",
-     "points": 1,
-     "contribution": 7,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 5,
-     "team": "Mexico",
-     "display": "Mexico",
-     "abbr": "MEX",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 6,
-     "team": "Caribbean",
-     "display": "Dominican Republic",
-     "abbr": "DOM",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 7,
-     "team": "Mid-Atlantic",
-     "display": "Pennsylvania",
-     "abbr": "PA",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 8,
-     "team": "Midwest",
-     "display": "Iowa",
-     "abbr": "IA",
-     "points": 0,
-     "contribution": 0,
-     "state": "winners",
-     "alive": true
-    }
-   ],
-   "tb_final_runs": 10
-  },
-  {
-   "rank": 13,
+   "rank": 14,
    "name": "Steven Huzzey",
    "total": 7,
-   "movement": 0,
+   "movement": -1,
    "alive": 8,
    "picks": [
     {
@@ -1598,8 +1598,8 @@
    "seat": "B",
    "state": "winners",
    "alive": true,
-   "label": "Opening Round \u2014 Wed Aug 19, 4:00 PM PT",
-   "points": 0,
+   "label": "Winners Round 2 \u2014 Fri Aug 21, 4:00 PM PT",
+   "points": 1,
    "picked_by": 4,
    "picked_at_one": 1
   },
@@ -1671,9 +1671,9 @@
    "league": "Bridgewater Joe Lazaro LL",
    "side": "US",
    "seat": "B",
-   "state": "winners",
+   "state": "elimination",
    "alive": true,
-   "label": "Opening Round \u2014 Wed Aug 19, 4:00 PM PT",
+   "label": "Elimination Round 1 \u2014 Sat Aug 22, 12:00 PM PT",
    "points": 0,
    "picked_by": 0,
    "picked_at_one": 0
@@ -1756,6 +1756,16 @@
  ],
  "recent": [
   {
+   "game": 4,
+   "label": "Opening Round",
+   "winner": "Metro",
+   "loser": "New England",
+   "winner_display": "New Jersey",
+   "loser_display": "Massachusetts",
+   "date": "2026-08-19",
+   "time": "4:00 PM"
+  },
+  {
    "game": 3,
    "label": "Opening Round",
    "winner": "Asia-Pacific",
@@ -1787,18 +1797,6 @@
   }
  ],
  "upcoming": [
-  {
-   "game": 4,
-   "label": "Opening Round",
-   "side": "US",
-   "date": "2026-08-19",
-   "time": "4:00 PM",
-   "a": "Metro",
-   "b": "New England",
-   "a_display": "New Jersey",
-   "b_display": "Massachusetts",
-   "ready": true
-  },
   {
    "game": 5,
    "label": "Opening Round",
@@ -1857,6 +1855,18 @@
    "b": "Latin America",
    "a_display": "Panama",
    "b_display": "Nicaragua",
+   "ready": true
+  },
+  {
+   "game": 10,
+   "label": "Winners Round 2",
+   "side": "US",
+   "date": "2026-08-21",
+   "time": "12:00 PM",
+   "a": "Southwest",
+   "b": "Northwest",
+   "a_display": "Texas",
+   "b_display": "Washington",
    "ready": true
   }
  ],
