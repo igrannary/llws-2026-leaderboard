@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-21T11:25:01",
- "generated_display": "Aug 21, 11:25 AM",
+ "generated_at": "2026-08-21T11:40:01",
+ "generated_display": "Aug 21, 11:40 AM",
  "games_played": 8,
  "games_total": 38,
  "champion": null,
@@ -16,7 +16,7 @@
    "rank": 1,
    "name": "Tom Knoll",
    "total": 54,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -106,7 +106,7 @@
    "rank": 2,
    "name": "Barry Rosenblood",
    "total": 47,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Jim Rowland",
    "total": 34,
-   "movement": 5,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Steven Huzzey",
    "total": 31,
-   "movement": 3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Phil Paterson",
    "total": 28,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Andrew Mallon",
    "total": 26,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 7,
    "name": "Ian Grannary",
    "total": 26,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -736,7 +736,7 @@
    "rank": 9,
    "name": "Jonathan Loewen",
    "total": 25,
-   "movement": 6,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -826,7 +826,7 @@
    "rank": 10,
    "name": "Abby Gubbels",
    "total": 24,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -916,7 +916,7 @@
    "rank": 11,
    "name": "Jaden Hanna",
    "total": 23,
-   "movement": 3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1006,7 +1006,7 @@
    "rank": 12,
    "name": "Brett 'The Oracle' Blair",
    "total": 22,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1096,7 +1096,7 @@
    "rank": 12,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 22,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1186,7 +1186,7 @@
    "rank": 14,
    "name": "Josh Hilverda",
    "total": 20,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1276,7 +1276,7 @@
    "rank": 15,
    "name": "Miles Campbell",
    "total": 18,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
