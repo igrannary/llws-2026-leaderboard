@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-21T15:25:01",
- "generated_display": "Aug 21, 3:25 PM",
+ "generated_at": "2026-08-21T15:40:01",
+ "generated_display": "Aug 21, 3:40 PM",
  "games_played": 10,
  "games_total": 38,
  "champion": null,
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Phil Paterson",
    "total": 32,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Steven Huzzey",
    "total": 31,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 29,
-   "movement": 5,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 8,
    "name": "Jonathan Loewen",
    "total": 28,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -736,7 +736,7 @@
    "rank": 9,
    "name": "Andrew Mallon",
    "total": 26,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -826,7 +826,7 @@
    "rank": 9,
    "name": "Ian Grannary",
    "total": 26,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -916,7 +916,7 @@
    "rank": 9,
    "name": "Jaden Hanna",
    "total": 26,
-   "movement": 2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1006,7 +1006,7 @@
    "rank": 12,
    "name": "Josh Hilverda",
    "total": 25,
-   "movement": 2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1096,7 +1096,7 @@
    "rank": 13,
    "name": "Abby Gubbels",
    "total": 24,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1186,7 +1186,7 @@
    "rank": 14,
    "name": "Brett 'The Oracle' Blair",
    "total": 22,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1464,7 +1464,7 @@
    "seat": "B",
    "state": "winners",
    "alive": true,
-   "label": "Winners Round 2 \u2014 Fri Aug 21, 3:00 PM PT",
+   "label": "Winners Round 2 \u2014 Fri Aug 21, 4:00 PM PT",
    "points": 1,
    "picked_by": 14,
    "picked_at_one": 8
@@ -1539,7 +1539,7 @@
    "seat": "A",
    "state": "winners",
    "alive": true,
-   "label": "Winners Round 2 \u2014 Fri Aug 21, 3:00 PM PT",
+   "label": "Winners Round 2 \u2014 Fri Aug 21, 4:00 PM PT",
    "points": 0,
    "picked_by": 0,
    "picked_at_one": 0
@@ -1823,7 +1823,7 @@
    "label": "Winners Round 2",
    "side": "INTL",
    "date": "2026-08-21",
-   "time": "3:00 PM",
+   "time": "4:00 PM",
    "a": "Europe-Africa",
    "b": "Asia-Pacific",
    "a_display": "Czech Republic",
