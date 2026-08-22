@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-22T13:40:02",
- "generated_display": "Aug 22, 1:40 PM",
+ "generated_at": "2026-08-22T13:55:02",
+ "generated_display": "Aug 22, 1:55 PM",
  "games_played": 13,
  "games_total": 38,
  "champion": null,
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Phil Paterson",
    "total": 45,
-   "movement": 1,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 44,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Jim Rowland",
    "total": 42,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 7,
    "name": "Josh Hilverda",
    "total": 38,
-   "movement": 5,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -826,7 +826,7 @@
    "rank": 10,
    "name": "Andrew Mallon",
    "total": 36,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -916,7 +916,7 @@
    "rank": 10,
    "name": "Jaden Hanna",
    "total": 36,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1006,7 +1006,7 @@
    "rank": 10,
    "name": "Jonathan Loewen",
    "total": 36,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1096,7 +1096,7 @@
    "rank": 13,
    "name": "Brett 'The Oracle' Blair",
    "total": 30,
-   "movement": 3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1276,7 +1276,7 @@
    "rank": 15,
    "name": "Miles Campbell",
    "total": 28,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1366,7 +1366,7 @@
    "rank": 16,
    "name": "Jazz Shields",
    "total": 26,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
