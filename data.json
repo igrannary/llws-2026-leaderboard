@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-21T19:48:57",
- "generated_display": "Aug 21, 7:48 PM",
+ "generated_at": "2026-08-21T19:55:02",
+ "generated_display": "Aug 21, 7:55 PM",
  "games_played": 12,
  "games_total": 38,
  "champion": null,
@@ -106,7 +106,7 @@
    "rank": 2,
    "name": "Barry Rosenblood",
    "total": 60,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -196,7 +196,7 @@
    "rank": 3,
    "name": "Felipe De Paula",
    "total": 52,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Jim Rowland",
    "total": 42,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 5,
    "name": "Phil Paterson",
    "total": 42,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Abby Gubbels",
    "total": 38,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -736,7 +736,7 @@
    "rank": 9,
    "name": "Andrew Mallon",
    "total": 36,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -826,7 +826,7 @@
    "rank": 9,
    "name": "Jaden Hanna",
    "total": 36,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -916,7 +916,7 @@
    "rank": 9,
    "name": "Jonathan Loewen",
    "total": 36,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1006,7 +1006,7 @@
    "rank": 12,
    "name": "Josh Hilverda",
    "total": 34,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1096,7 +1096,7 @@
    "rank": 13,
    "name": "Ian Grannary",
    "total": 30,
-   "movement": -3,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1186,7 +1186,7 @@
    "rank": 14,
    "name": "Miles Campbell",
    "total": 28,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1276,7 +1276,7 @@
    "rank": 15,
    "name": "Jazz Shields",
    "total": 26,
-   "movement": 1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1366,7 +1366,7 @@
    "rank": 16,
    "name": "Brett 'The Oracle' Blair",
    "total": 22,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
