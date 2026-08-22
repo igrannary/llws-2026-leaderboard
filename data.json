@@ -1,9 +1,9 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-22T13:55:02",
- "generated_display": "Aug 22, 1:55 PM",
- "games_played": 13,
+ "generated_at": "2026-08-22T14:10:01",
+ "generated_display": "Aug 22, 2:10 PM",
+ "games_played": 14,
  "games_total": 38,
  "champion": null,
  "champion_display": null,
@@ -284,6 +284,96 @@
   },
   {
    "rank": 4,
+   "name": "Jim Rowland",
+   "total": 45,
+   "movement": 2,
+   "alive": 8,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 2,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 3,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 2,
+     "contribution": 16,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 4,
+     "team": "Midwest",
+     "display": "Iowa",
+     "abbr": "IA",
+     "points": 2,
+     "contribution": 14,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 5,
+     "team": "Curacao",
+     "display": "Curacao",
+     "abbr": "CUW",
+     "points": 2,
+     "contribution": 12,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 6,
+     "team": "Southwest",
+     "display": "Texas",
+     "abbr": "TX",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 7,
+     "team": "Caribbean",
+     "display": "Dominican Republic",
+     "abbr": "DOM",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 8,
+     "team": "Great Lakes",
+     "display": "Ohio",
+     "abbr": "OH",
+     "points": 1,
+     "contribution": 3,
+     "state": "elimination",
+     "alive": true
+    }
+   ],
+   "tb_final_runs": 7
+  },
+  {
+   "rank": 4,
    "name": "Phil Paterson",
    "total": 45,
    "movement": 0,
@@ -373,10 +463,10 @@
    "tb_final_runs": 7
   },
   {
-   "rank": 5,
+   "rank": 6,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 44,
-   "movement": 0,
+   "movement": -1,
    "alive": 8,
    "picks": [
     {
@@ -461,96 +551,6 @@
     }
    ],
    "tb_final_runs": 9
-  },
-  {
-   "rank": 6,
-   "name": "Jim Rowland",
-   "total": 42,
-   "movement": 0,
-   "alive": 8,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 2,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 2,
-     "contribution": 16,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 4,
-     "team": "Midwest",
-     "display": "Iowa",
-     "abbr": "IA",
-     "points": 2,
-     "contribution": 14,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 5,
-     "team": "Curacao",
-     "display": "Curacao",
-     "abbr": "CUW",
-     "points": 2,
-     "contribution": 12,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 6,
-     "team": "Southwest",
-     "display": "Texas",
-     "abbr": "TX",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 7,
-     "team": "Caribbean",
-     "display": "Dominican Republic",
-     "abbr": "DOM",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 8,
-     "team": "Great Lakes",
-     "display": "Ohio",
-     "abbr": "OH",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    }
-   ],
-   "tb_final_runs": 7
   },
   {
    "rank": 7,
@@ -1095,7 +1095,7 @@
   {
    "rank": 13,
    "name": "Brett 'The Oracle' Blair",
-   "total": 30,
+   "total": 33,
    "movement": 0,
    "alive": 8,
    "picks": [
@@ -1174,8 +1174,8 @@
      "team": "Great Lakes",
      "display": "Ohio",
      "abbr": "OH",
-     "points": 0,
-     "contribution": 0,
+     "points": 1,
+     "contribution": 3,
      "state": "elimination",
      "alive": true
     }
@@ -1184,9 +1184,99 @@
   },
   {
    "rank": 13,
+   "name": "Miles Campbell",
+   "total": 33,
+   "movement": 2,
+   "alive": 8,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 2,
+     "contribution": 20,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 2,
+     "team": "Southwest",
+     "display": "Texas",
+     "abbr": "TX",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 3,
+     "team": "Southeast",
+     "display": "Alabama",
+     "abbr": "AL",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 4,
+     "team": "Caribbean",
+     "display": "Dominican Republic",
+     "abbr": "DOM",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 5,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 6,
+     "team": "Great Lakes",
+     "display": "Ohio",
+     "abbr": "OH",
+     "points": 1,
+     "contribution": 5,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 7,
+     "team": "Mexico",
+     "display": "Mexico",
+     "abbr": "MEX",
+     "points": 2,
+     "contribution": 8,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 8,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "elimination",
+     "alive": true
+    }
+   ],
+   "tb_final_runs": 9
+  },
+  {
+   "rank": 15,
    "name": "Ian Grannary",
    "total": 30,
-   "movement": 0,
+   "movement": -2,
    "alive": 8,
    "picks": [
     {
@@ -1273,99 +1363,9 @@
    "tb_final_runs": 7
   },
   {
-   "rank": 15,
-   "name": "Miles Campbell",
-   "total": 28,
-   "movement": 0,
-   "alive": 8,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 2,
-     "contribution": 20,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 2,
-     "team": "Southwest",
-     "display": "Texas",
-     "abbr": "TX",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "Southeast",
-     "display": "Alabama",
-     "abbr": "AL",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 4,
-     "team": "Caribbean",
-     "display": "Dominican Republic",
-     "abbr": "DOM",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 5,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 6,
-     "team": "Great Lakes",
-     "display": "Ohio",
-     "abbr": "OH",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 7,
-     "team": "Mexico",
-     "display": "Mexico",
-     "abbr": "MEX",
-     "points": 2,
-     "contribution": 8,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 8,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "elimination",
-     "alive": true
-    }
-   ],
-   "tb_final_runs": 9
-  },
-  {
    "rank": 16,
    "name": "Jazz Shields",
-   "total": 26,
+   "total": 29,
    "movement": 0,
    "alive": 8,
    "picks": [
@@ -1444,8 +1444,8 @@
      "team": "Great Lakes",
      "display": "Ohio",
      "abbr": "OH",
-     "points": 0,
-     "contribution": 0,
+     "points": 1,
+     "contribution": 3,
      "state": "elimination",
      "alive": true
     }
@@ -1554,8 +1554,8 @@
    "seat": "C",
    "state": "elimination",
    "alive": true,
-   "label": "Elimination Round 1 \u2014 Sat Aug 22, 12:00 PM PT",
-   "points": 0,
+   "label": "Elimination Round 2 \u2014 Mon Aug 24, 12:00 PM PT",
+   "points": 1,
    "picked_by": 4,
    "picked_at_one": 0
   },
@@ -1672,9 +1672,9 @@
    "league": "Bridgewater Joe Lazaro LL",
    "side": "US",
    "seat": "B",
-   "state": "elimination",
-   "alive": true,
-   "label": "Elimination Round 1 \u2014 Sat Aug 22, 12:00 PM PT",
+   "state": "eliminated",
+   "alive": false,
+   "label": "Eliminated \u2014 Elimination Round 1",
    "points": 0,
    "picked_by": 0,
    "picked_at_one": 0
@@ -1757,6 +1757,16 @@
  ],
  "recent": [
   {
+   "game": 14,
+   "label": "Elimination Round 1",
+   "winner": "Great Lakes",
+   "loser": "New England",
+   "winner_display": "Ohio",
+   "loser_display": "Massachusetts",
+   "date": "2026-08-22",
+   "time": "12:00 PM"
+  },
+  {
    "game": 13,
    "label": "Elimination Round 1",
    "winner": "Canada",
@@ -1805,31 +1815,9 @@
    "loser_display": "Panama",
    "date": "2026-08-21",
    "time": "12:00 PM"
-  },
-  {
-   "game": 8,
-   "label": "Opening Round",
-   "winner": "Midwest",
-   "loser": "West",
-   "winner_display": "Iowa",
-   "loser_display": "California",
-   "date": "2026-08-21",
-   "time": "9:00 AM"
   }
  ],
  "upcoming": [
-  {
-   "game": 14,
-   "label": "Elimination Round 1",
-   "side": "US",
-   "date": "2026-08-22",
-   "time": "12:00 PM",
-   "a": "New England",
-   "b": "Great Lakes",
-   "a_display": "Massachusetts",
-   "b_display": "Ohio",
-   "ready": true
-  },
   {
    "game": 15,
    "label": "Elimination Round 1",
@@ -1888,6 +1876,18 @@
    "b": "Metro",
    "a_display": "Iowa",
    "b_display": "New Jersey",
+   "ready": true
+  },
+  {
+   "game": 20,
+   "label": "Winners Semifinal",
+   "side": "US",
+   "date": "2026-08-23",
+   "time": "11:00 AM",
+   "a": "Curacao",
+   "b": "Asia-Pacific",
+   "a_display": "Curacao",
+   "b_display": "South Korea",
    "ready": true
   }
  ],
