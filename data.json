@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-22T14:10:01",
- "generated_display": "Aug 22, 2:10 PM",
+ "generated_at": "2026-08-22T14:25:05",
+ "generated_display": "Aug 22, 2:25 PM",
  "games_played": 14,
  "games_total": 38,
  "champion": null,
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Jim Rowland",
    "total": 45,
-   "movement": 2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 44,
-   "movement": -1,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1186,7 +1186,7 @@
    "rank": 13,
    "name": "Miles Campbell",
    "total": 33,
-   "movement": 2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
@@ -1276,7 +1276,7 @@
    "rank": 15,
    "name": "Ian Grannary",
    "total": 30,
-   "movement": -2,
+   "movement": 0,
    "alive": 8,
    "picks": [
     {
