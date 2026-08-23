@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-23T08:35:15",
- "generated_display": "Aug 23, 8:35 AM",
+ "generated_at": "2026-08-23T09:10:01",
+ "generated_display": "Aug 23, 9:10 AM",
  "games_played": 17,
  "games_total": 38,
  "champion": null,
@@ -196,7 +196,7 @@
    "rank": 3,
    "name": "Phil Paterson",
    "total": 68,
-   "movement": 2,
+   "movement": 0,
    "alive": 5,
    "picks": [
     {
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Felipe De Paula",
    "total": 61,
-   "movement": -1,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Jim Rowland",
    "total": 55,
-   "movement": -1,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Josh Hilverda",
    "total": 54,
-   "movement": -1,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
