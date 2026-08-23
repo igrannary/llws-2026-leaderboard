@@ -1,9 +1,9 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-23T07:55:02",
- "generated_display": "Aug 23, 7:55 AM",
- "games_played": 16,
+ "generated_at": "2026-08-23T08:35:15",
+ "generated_display": "Aug 23, 8:35 AM",
+ "games_played": 17,
  "games_total": 38,
  "champion": null,
  "champion_display": null,
@@ -15,7 +15,7 @@
   {
    "rank": 1,
    "name": "Tom Knoll",
-   "total": 80,
+   "total": 96,
    "movement": 0,
    "alive": 7,
    "picks": [
@@ -44,8 +44,8 @@
      "team": "Mountain",
      "display": "Nevada",
      "abbr": "NV",
-     "points": 2,
-     "contribution": 16,
+     "points": 4,
+     "contribution": 32,
      "state": "winners",
      "alive": true
     },
@@ -105,7 +105,7 @@
   {
    "rank": 2,
    "name": "Barry Rosenblood",
-   "total": 72,
+   "total": 88,
    "movement": 0,
    "alive": 6,
    "picks": [
@@ -134,8 +134,8 @@
      "team": "Mountain",
      "display": "Nevada",
      "abbr": "NV",
-     "points": 2,
-     "contribution": 16,
+     "points": 4,
+     "contribution": 32,
      "state": "winners",
      "alive": true
     },
@@ -194,9 +194,99 @@
   },
   {
    "rank": 3,
+   "name": "Phil Paterson",
+   "total": 68,
+   "movement": 2,
+   "alive": 5,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 2,
+     "contribution": 20,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 2,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 1,
+     "contribution": 9,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 3,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 4,
+     "team": "Mountain",
+     "display": "Nevada",
+     "abbr": "NV",
+     "points": 4,
+     "contribution": 28,
+     "state": "winners",
+     "alive": true
+    },
+    {
+     "rank": 5,
+     "team": "Caribbean",
+     "display": "Dominican Republic",
+     "abbr": "DOM",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 6,
+     "team": "Australia",
+     "display": "Australia",
+     "abbr": "AUS",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 7,
+     "team": "Northwest",
+     "display": "Washington",
+     "abbr": "WA",
+     "points": 2,
+     "contribution": 8,
+     "state": "elimination",
+     "alive": true
+    },
+    {
+     "rank": 8,
+     "team": "Canada",
+     "display": "Canada",
+     "abbr": "CAN",
+     "points": 1,
+     "contribution": 3,
+     "state": "elimination",
+     "alive": true
+    }
+   ],
+   "tb_final_runs": 7
+  },
+  {
+   "rank": 4,
    "name": "Felipe De Paula",
    "total": 61,
-   "movement": 0,
+   "movement": -1,
    "alive": 7,
    "picks": [
     {
@@ -236,7 +326,7 @@
      "abbr": "WA",
      "points": 2,
      "contribution": 14,
-     "state": "winners",
+     "state": "elimination",
      "alive": true
     },
     {
@@ -283,10 +373,10 @@
    "tb_final_runs": 10
   },
   {
-   "rank": 4,
+   "rank": 5,
    "name": "Jim Rowland",
    "total": 55,
-   "movement": 0,
+   "movement": -1,
    "alive": 6,
    "picks": [
     {
@@ -373,10 +463,10 @@
    "tb_final_runs": 7
   },
   {
-   "rank": 5,
+   "rank": 6,
    "name": "Josh Hilverda",
    "total": 54,
-   "movement": 0,
+   "movement": -1,
    "alive": 7,
    "picks": [
     {
@@ -461,96 +551,6 @@
     }
    ],
    "tb_final_runs": 9
-  },
-  {
-   "rank": 5,
-   "name": "Phil Paterson",
-   "total": 54,
-   "movement": 0,
-   "alive": 5,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 2,
-     "contribution": 20,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 2,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 1,
-     "contribution": 9,
-     "state": "elimination",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 4,
-     "team": "Mountain",
-     "display": "Nevada",
-     "abbr": "NV",
-     "points": 2,
-     "contribution": 14,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 5,
-     "team": "Caribbean",
-     "display": "Dominican Republic",
-     "abbr": "DOM",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 6,
-     "team": "Australia",
-     "display": "Australia",
-     "abbr": "AUS",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 7,
-     "team": "Northwest",
-     "display": "Washington",
-     "abbr": "WA",
-     "points": 2,
-     "contribution": 8,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 8,
-     "team": "Canada",
-     "display": "Canada",
-     "abbr": "CAN",
-     "points": 1,
-     "contribution": 3,
-     "state": "elimination",
-     "alive": true
-    }
-   ],
-   "tb_final_runs": 7
   },
   {
    "rank": 7,
@@ -1659,8 +1659,8 @@
    "seat": "C",
    "state": "winners",
    "alive": true,
-   "label": "Winners Semifinal \u2014 Sun Aug 23, 6:00 AM PT",
-   "points": 2,
+   "label": "Winners Bracket Final \u2014 Wed Aug 26, 4:00 PM PT",
+   "points": 4,
    "picked_by": 3,
    "picked_at_one": 0
   },
@@ -1687,9 +1687,9 @@
    "league": "Soundview LL",
    "side": "US",
    "seat": "B",
-   "state": "winners",
+   "state": "elimination",
    "alive": true,
-   "label": "Winners Semifinal \u2014 Sun Aug 23, 6:00 AM PT",
+   "label": "Elimination Round 3 \u2014 Tue Aug 25, 12:00 PM PT",
    "points": 2,
    "picked_by": 2,
    "picked_at_one": 0
@@ -1757,6 +1757,16 @@
  ],
  "recent": [
   {
+   "game": 17,
+   "label": "Winners Semifinal",
+   "winner": "Mountain",
+   "loser": "Northwest",
+   "winner_display": "Nevada",
+   "loser_display": "Washington",
+   "date": "2026-08-23",
+   "time": "6:00 AM"
+  },
+  {
    "game": 16,
    "label": "Elimination Round 1",
    "winner": "Southeast",
@@ -1805,31 +1815,9 @@
    "loser_display": "Pennsylvania",
    "date": "2026-08-21",
    "time": "4:00 PM"
-  },
-  {
-   "game": 11,
-   "label": "Winners Round 2",
-   "winner": "Asia-Pacific",
-   "loser": "Europe-Africa",
-   "winner_display": "South Korea",
-   "loser_display": "Czech Republic",
-   "date": "2026-08-21",
-   "time": "4:00 PM"
   }
  ],
  "upcoming": [
-  {
-   "game": 17,
-   "label": "Winners Semifinal",
-   "side": "INTL",
-   "date": "2026-08-23",
-   "time": "6:00 AM",
-   "a": "Mountain",
-   "b": "Northwest",
-   "a_display": "Nevada",
-   "b_display": "Washington",
-   "ready": true
-  },
   {
    "game": 18,
    "label": "Winners Semifinal",
@@ -1888,6 +1876,18 @@
    "b": "Great Lakes",
    "a_display": "Texas",
    "b_display": "Ohio",
+   "ready": true
+  },
+  {
+   "game": 23,
+   "label": "Elimination Round 2",
+   "side": "INTL",
+   "date": "2026-08-24",
+   "time": "2:00 PM",
+   "a": "Europe-Africa",
+   "b": "Japan",
+   "a_display": "Czech Republic",
+   "b_display": "Japan",
    "ready": true
   }
  ],
