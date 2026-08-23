@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-23T12:55:02",
- "generated_display": "Aug 23, 12:55 PM",
+ "generated_at": "2026-08-23T13:10:02",
+ "generated_display": "Aug 23, 1:10 PM",
  "games_played": 19,
  "games_total": 38,
  "champion": null,
@@ -16,7 +16,7 @@
    "rank": 1,
    "name": "Barry Rosenblood",
    "total": 112,
-   "movement": 1,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -106,7 +106,7 @@
    "rank": 2,
    "name": "Tom Knoll",
    "total": 96,
-   "movement": -1,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -196,7 +196,7 @@
    "rank": 3,
    "name": "Jim Rowland",
    "total": 69,
-   "movement": 5,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Phil Paterson",
    "total": 68,
-   "movement": -1,
+   "movement": 0,
    "alive": 5,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Felipe De Paula",
    "total": 67,
-   "movement": 1,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 5,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 67,
-   "movement": -1,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Josh Hilverda",
    "total": 64,
-   "movement": -2,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 8,
    "name": "Steven Huzzey",
    "total": 62,
-   "movement": 2,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -736,7 +736,7 @@
    "rank": 9,
    "name": "Brett 'The Oracle' Blair",
    "total": 61,
-   "movement": 3,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -826,7 +826,7 @@
    "rank": 10,
    "name": "Ian Grannary",
    "total": 56,
-   "movement": 5,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -916,7 +916,7 @@
    "rank": 10,
    "name": "Jonathan Loewen",
    "total": 56,
-   "movement": -3,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -1006,7 +1006,7 @@
    "rank": 12,
    "name": "Jaden Hanna",
    "total": 55,
-   "movement": -4,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -1096,7 +1096,7 @@
    "rank": 13,
    "name": "Andrew Mallon",
    "total": 52,
-   "movement": -3,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -1186,7 +1186,7 @@
    "rank": 14,
    "name": "Abby Gubbels",
    "total": 47,
-   "movement": -2,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -1276,7 +1276,7 @@
    "rank": 14,
    "name": "Miles Campbell",
    "total": 47,
-   "movement": -2,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -1366,7 +1366,7 @@
    "rank": 16,
    "name": "Jazz Shields",
    "total": 46,
-   "movement": -1,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -1644,7 +1644,7 @@
    "seat": "C",
    "state": "winners",
    "alive": true,
-   "label": "Winners Bracket Final \u2014 Wed Aug 26, 4:00 PM PT",
+   "label": "Winners Bracket Final \u2014 Wed Aug 26, 12:00 PM PT",
    "points": 4,
    "picked_by": 6,
    "picked_at_one": 0
@@ -1659,7 +1659,7 @@
    "seat": "C",
    "state": "winners",
    "alive": true,
-   "label": "Winners Bracket Final \u2014 Wed Aug 26, 4:00 PM PT",
+   "label": "Winners Bracket Final \u2014 Wed Aug 26, 12:00 PM PT",
    "points": 4,
    "picked_by": 3,
    "picked_at_one": 0
