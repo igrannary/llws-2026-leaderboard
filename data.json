@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-23T10:55:02",
- "generated_display": "Aug 23, 10:55 AM",
+ "generated_at": "2026-08-23T11:25:02",
+ "generated_display": "Aug 23, 11:25 AM",
  "games_played": 18,
  "games_total": 38,
  "champion": null,
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 67,
-   "movement": 3,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Josh Hilverda",
    "total": 64,
-   "movement": 1,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Felipe De Paula",
    "total": 61,
-   "movement": -2,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Jonathan Loewen",
    "total": 56,
-   "movement": 3,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 8,
    "name": "Jaden Hanna",
    "total": 55,
-   "movement": 3,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -736,7 +736,7 @@
    "rank": 8,
    "name": "Jim Rowland",
    "total": 55,
-   "movement": -3,
+   "movement": 0,
    "alive": 6,
    "picks": [
     {
@@ -826,7 +826,7 @@
    "rank": 10,
    "name": "Andrew Mallon",
    "total": 52,
-   "movement": -2,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
@@ -916,7 +916,7 @@
    "rank": 10,
    "name": "Steven Huzzey",
    "total": 52,
-   "movement": -2,
+   "movement": 0,
    "alive": 7,
    "picks": [
     {
