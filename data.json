@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-27T15:11:41",
- "generated_display": "Aug 27, 3:11 PM",
+ "generated_at": "2026-08-27T15:55:44",
+ "generated_display": "Aug 27, 3:55 PM",
  "games_played": 34,
  "games_total": 38,
  "champion": null,
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Josh Hilverda",
    "total": 124,
-   "movement": -1,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 7,
    "name": "Phil Paterson",
    "total": 124,
-   "movement": -1,
+   "movement": 0,
    "alive": 2,
    "picks": [
     {
@@ -916,7 +916,7 @@
    "rank": 11,
    "name": "Miles Campbell",
    "total": 107,
-   "movement": 2,
+   "movement": 0,
    "alive": 2,
    "picks": [
     {
@@ -1006,7 +1006,7 @@
    "rank": 12,
    "name": "Ian Grannary",
    "total": 106,
-   "movement": -1,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -1096,7 +1096,7 @@
    "rank": 13,
    "name": "Felipe De Paula",
    "total": 103,
-   "movement": -1,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -1186,7 +1186,7 @@
    "rank": 14,
    "name": "Andrew Mallon",
    "total": 102,
-   "movement": -1,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -1764,7 +1764,7 @@
    "winner_display": "Ohio",
    "loser_display": "Iowa",
    "date": "2026-08-27",
-   "time": "6:00 AM"
+   "time": "4:00 PM"
   },
   {
    "game": 33,
@@ -1774,7 +1774,7 @@
    "winner_display": "Japan",
    "loser_display": "Nicaragua",
    "date": "2026-08-27",
-   "time": "6:00 AM"
+   "time": "12:00 PM"
   },
   {
    "game": 32,
@@ -1784,7 +1784,7 @@
    "winner_display": "Ohio",
    "loser_display": "Alabama",
    "date": "2026-08-26",
-   "time": "4:00 PM"
+   "time": "2:00 PM"
   },
   {
    "game": 31,
@@ -1794,7 +1794,7 @@
    "winner_display": "Japan",
    "loser_display": "Canada",
    "date": "2026-08-26",
-   "time": "2:00 PM"
+   "time": "10:00 AM"
   },
   {
    "game": 30,
@@ -1804,7 +1804,7 @@
    "winner_display": "Nevada",
    "loser_display": "Iowa",
    "date": "2026-08-26",
-   "time": "12:00 PM"
+   "time": "4:00 PM"
   },
   {
    "game": 29,
@@ -1814,7 +1814,7 @@
    "winner_display": "Curacao",
    "loser_display": "Nicaragua",
    "date": "2026-08-26",
-   "time": "10:00 AM"
+   "time": "12:00 PM"
   }
  ],
  "upcoming": [
