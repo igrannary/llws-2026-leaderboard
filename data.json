@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-26T19:55:06",
- "generated_display": "Aug 26, 7:55 PM",
+ "generated_at": "2026-08-26T20:03:21",
+ "generated_display": "Aug 26, 8:03 PM",
  "games_played": 32,
  "games_total": 38,
  "champion": null,
@@ -16,7 +16,7 @@
    "rank": 1,
    "name": "Tom Knoll",
    "total": 165,
-   "movement": 1,
+   "movement": 0,
    "alive": 3,
    "picks": [
     {
@@ -106,7 +106,7 @@
    "rank": 2,
    "name": "Barry Rosenblood",
    "total": 159,
-   "movement": -1,
+   "movement": 0,
    "alive": 4,
    "picks": [
     {
@@ -196,7 +196,7 @@
    "rank": 3,
    "name": "Jim Rowland",
    "total": 132,
-   "movement": 1,
+   "movement": 0,
    "alive": 4,
    "picks": [
     {
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Jonathan Loewen",
    "total": 122,
-   "movement": 2,
+   "movement": 0,
    "alive": 3,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Brett 'The Oracle' Blair",
    "total": 119,
-   "movement": -2,
+   "movement": 0,
    "alive": 3,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Jazz Shields",
    "total": 115,
-   "movement": 2,
+   "movement": 0,
    "alive": 3,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 6,
    "name": "Phil Paterson",
    "total": 115,
-   "movement": 3,
+   "movement": 0,
    "alive": 2,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 8,
    "name": "Josh Hilverda",
    "total": 114,
-   "movement": -3,
+   "movement": 0,
    "alive": 2,
    "picks": [
     {
@@ -736,7 +736,7 @@
    "rank": 9,
    "name": "Steven Huzzey",
    "total": 112,
-   "movement": -3,
+   "movement": 0,
    "alive": 3,
    "picks": [
     {
@@ -1096,7 +1096,7 @@
    "rank": 13,
    "name": "Felipe De Paula",
    "total": 94,
-   "movement": -1,
+   "movement": 0,
    "alive": 2,
    "picks": [
     {
@@ -1186,7 +1186,7 @@
    "rank": 14,
    "name": "Andrew Mallon",
    "total": 93,
-   "movement": 1,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -1276,7 +1276,7 @@
    "rank": 15,
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 91,
-   "movement": -3,
+   "movement": 0,
    "alive": 2,
    "picks": [
     {
@@ -1554,7 +1554,7 @@
    "seat": "C",
    "state": "elimination",
    "alive": true,
-   "label": "Elimination Final \u2014 Thu Aug 27, 4:00 PM PT",
+   "label": "Elimination Final \u2014 Thu Aug 27, 6:00 AM PT",
    "points": 4,
    "picked_by": 4,
    "picked_at_one": 0
@@ -1569,7 +1569,7 @@
    "seat": "C",
    "state": "elimination",
    "alive": true,
-   "label": "Elimination Final \u2014 Thu Aug 27, 12:00 PM PT",
+   "label": "Elimination Final \u2014 Thu Aug 27, 6:00 AM PT",
    "points": 4,
    "picked_by": 16,
    "picked_at_one": 4
@@ -1584,7 +1584,7 @@
    "seat": "B",
    "state": "elimination",
    "alive": true,
-   "label": "Elimination Final \u2014 Thu Aug 27, 12:00 PM PT",
+   "label": "Elimination Final \u2014 Thu Aug 27, 6:00 AM PT",
    "points": 4,
    "picked_by": 5,
    "picked_at_one": 0
@@ -1644,7 +1644,7 @@
    "seat": "C",
    "state": "elimination",
    "alive": true,
-   "label": "Elimination Final \u2014 Thu Aug 27, 4:00 PM PT",
+   "label": "Elimination Final \u2014 Thu Aug 27, 6:00 AM PT",
    "points": 4,
    "picked_by": 6,
    "picked_at_one": 0
@@ -1823,7 +1823,7 @@
    "label": "Elimination Final",
    "side": "INTL",
    "date": "2026-08-27",
-   "time": "12:00 PM",
+   "time": "6:00 AM",
    "a": "Latin America",
    "b": "Japan",
    "a_display": "Nicaragua",
@@ -1835,7 +1835,7 @@
    "label": "Elimination Final",
    "side": "US",
    "date": "2026-08-27",
-   "time": "4:00 PM",
+   "time": "6:00 AM",
    "a": "Midwest",
    "b": "Great Lakes",
    "a_display": "Iowa",
