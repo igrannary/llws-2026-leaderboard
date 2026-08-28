@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-27T16:25:44",
- "generated_display": "Aug 27, 4:25 PM",
+ "generated_at": "2026-08-27T20:31:01",
+ "generated_display": "Aug 27, 8:31 PM",
  "games_played": 34,
  "games_total": 38,
  "champion": null,
@@ -1764,7 +1764,7 @@
    "winner_display": "Ohio",
    "loser_display": "Iowa",
    "date": "2026-08-27",
-   "time": "4:00 PM"
+   "time": "6:00 AM"
   },
   {
    "game": 33,
@@ -1774,7 +1774,7 @@
    "winner_display": "Japan",
    "loser_display": "Nicaragua",
    "date": "2026-08-27",
-   "time": "12:00 PM"
+   "time": "6:00 AM"
   },
   {
    "game": 32,
@@ -1784,7 +1784,7 @@
    "winner_display": "Ohio",
    "loser_display": "Alabama",
    "date": "2026-08-26",
-   "time": "2:00 PM"
+   "time": "4:00 PM"
   },
   {
    "game": 31,
@@ -1794,7 +1794,7 @@
    "winner_display": "Japan",
    "loser_display": "Canada",
    "date": "2026-08-26",
-   "time": "10:00 AM"
+   "time": "2:00 PM"
   },
   {
    "game": 30,
@@ -1804,7 +1804,7 @@
    "winner_display": "Nevada",
    "loser_display": "Iowa",
    "date": "2026-08-26",
-   "time": "4:00 PM"
+   "time": "12:00 PM"
   },
   {
    "game": 29,
@@ -1814,7 +1814,7 @@
    "winner_display": "Curacao",
    "loser_display": "Nicaragua",
    "date": "2026-08-26",
-   "time": "12:00 PM"
+   "time": "10:00 AM"
   }
  ],
  "upcoming": [
