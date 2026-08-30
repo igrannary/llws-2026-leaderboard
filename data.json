@@ -1,23 +1,23 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-27T22:02:44",
- "generated_display": "Aug 27, 10:02 PM",
- "games_played": 34,
+ "generated_at": "2026-08-30T10:40:45",
+ "generated_display": "Aug 30, 10:40 AM",
+ "games_played": 37,
  "games_total": 38,
  "champion": null,
  "champion_display": null,
- "us_champion": null,
- "us_champion_display": null,
- "intl_champion": null,
- "intl_champion_display": null,
+ "us_champion": "Mountain",
+ "us_champion_display": "Nevada",
+ "intl_champion": "Curacao",
+ "intl_champion_display": "Curacao",
  "standings": [
   {
    "rank": 1,
    "name": "Tom Knoll",
-   "total": 174,
+   "total": 265,
    "movement": 0,
-   "alive": 3,
+   "alive": 2,
    "picks": [
     {
      "rank": 1,
@@ -36,17 +36,17 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 45,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 3,
      "team": "Mountain",
      "display": "Nevada",
      "abbr": "NV",
-     "points": 6,
-     "contribution": 48,
-     "state": "winners",
+     "points": 13,
+     "contribution": 104,
+     "state": "side_champion",
      "alive": true
     },
     {
@@ -74,9 +74,9 @@
      "team": "Curacao",
      "display": "Curacao",
      "abbr": "CUW",
-     "points": 6,
-     "contribution": 30,
-     "state": "winners",
+     "points": 13,
+     "contribution": 65,
+     "state": "side_champion",
      "alive": true
     },
     {
@@ -105,9 +105,9 @@
   {
    "rank": 2,
    "name": "Barry Rosenblood",
-   "total": 166,
+   "total": 222,
    "movement": 0,
-   "alive": 2,
+   "alive": 1,
    "picks": [
     {
      "rank": 1,
@@ -134,9 +134,9 @@
      "team": "Mountain",
      "display": "Nevada",
      "abbr": "NV",
-     "points": 6,
-     "contribution": 48,
-     "state": "winners",
+     "points": 13,
+     "contribution": 104,
+     "state": "side_champion",
      "alive": true
     },
     {
@@ -146,8 +146,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 35,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 5,
@@ -195,9 +195,9 @@
   {
    "rank": 3,
    "name": "Jim Rowland",
-   "total": 145,
+   "total": 187,
    "movement": 0,
-   "alive": 3,
+   "alive": 1,
    "picks": [
     {
      "rank": 1,
@@ -206,8 +206,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 50,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 2,
@@ -244,9 +244,9 @@
      "team": "Curacao",
      "display": "Curacao",
      "abbr": "CUW",
-     "points": 6,
-     "contribution": 36,
-     "state": "winners",
+     "points": 13,
+     "contribution": 78,
+     "state": "side_champion",
      "alive": true
     },
     {
@@ -276,8 +276,8 @@
      "abbr": "OH",
      "points": 5,
      "contribution": 15,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     }
    ],
    "tb_final_runs": 7
@@ -285,9 +285,9 @@
   {
    "rank": 4,
    "name": "Jonathan Loewen",
-   "total": 132,
+   "total": 181,
    "movement": 0,
-   "alive": 2,
+   "alive": 1,
    "picks": [
     {
      "rank": 1,
@@ -296,8 +296,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 50,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 2,
@@ -324,9 +324,9 @@
      "team": "Curacao",
      "display": "Curacao",
      "abbr": "CUW",
-     "points": 6,
-     "contribution": 42,
-     "state": "winners",
+     "points": 13,
+     "contribution": 91,
+     "state": "side_champion",
      "alive": true
     },
     {
@@ -374,10 +374,100 @@
   },
   {
    "rank": 5,
+   "name": "Phil Paterson",
+   "total": 173,
+   "movement": 2,
+   "alive": 1,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 2,
+     "contribution": 20,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 2,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 5,
+     "contribution": 45,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 3,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 4,
+     "team": "Mountain",
+     "display": "Nevada",
+     "abbr": "NV",
+     "points": 13,
+     "contribution": 91,
+     "state": "side_champion",
+     "alive": true
+    },
+    {
+     "rank": 5,
+     "team": "Caribbean",
+     "display": "Dominican Republic",
+     "abbr": "DOM",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 6,
+     "team": "Australia",
+     "display": "Australia",
+     "abbr": "AUS",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 7,
+     "team": "Northwest",
+     "display": "Washington",
+     "abbr": "WA",
+     "points": 2,
+     "contribution": 8,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 8,
+     "team": "Canada",
+     "display": "Canada",
+     "abbr": "CAN",
+     "points": 3,
+     "contribution": 9,
+     "state": "eliminated",
+     "alive": false
+    }
+   ],
+   "tb_final_runs": 7
+  },
+  {
+   "rank": 6,
    "name": "Jazz Shields",
-   "total": 128,
-   "movement": 0,
-   "alive": 3,
+   "total": 156,
+   "movement": -1,
+   "alive": 1,
    "picks": [
     {
      "rank": 1,
@@ -386,8 +476,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 50,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 2,
@@ -444,9 +534,9 @@
      "team": "Curacao",
      "display": "Curacao",
      "abbr": "CUW",
-     "points": 6,
-     "contribution": 24,
-     "state": "winners",
+     "points": 13,
+     "contribution": 52,
+     "state": "side_champion",
      "alive": true
     },
     {
@@ -456,18 +546,198 @@
      "abbr": "OH",
      "points": 5,
      "contribution": 15,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     }
    ],
    "tb_final_runs": 9
   },
   {
-   "rank": 6,
+   "rank": 7,
+   "name": "Jaden Hanna",
+   "total": 154,
+   "movement": 2,
+   "alive": 1,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 2,
+     "contribution": 20,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 2,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 5,
+     "contribution": 45,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 3,
+     "team": "Southwest",
+     "display": "Texas",
+     "abbr": "TX",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 4,
+     "team": "Caribbean",
+     "display": "Dominican Republic",
+     "abbr": "DOM",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 5,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 6,
+     "team": "Curacao",
+     "display": "Curacao",
+     "abbr": "CUW",
+     "points": 13,
+     "contribution": 65,
+     "state": "side_champion",
+     "alive": true
+    },
+    {
+     "rank": 7,
+     "team": "Southeast",
+     "display": "Alabama",
+     "abbr": "AL",
+     "points": 3,
+     "contribution": 12,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 8,
+     "team": "Latin America",
+     "display": "Nicaragua",
+     "abbr": "NIC",
+     "points": 4,
+     "contribution": 12,
+     "state": "eliminated",
+     "alive": false
+    }
+   ],
+   "tb_final_runs": 9
+  },
+  {
+   "rank": 8,
+   "name": "Steven Huzzey",
+   "total": 146,
+   "movement": 2,
+   "alive": 1,
+   "picks": [
+    {
+     "rank": 1,
+     "team": "West",
+     "display": "California",
+     "abbr": "CA",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 2,
+     "team": "Mid-Atlantic",
+     "display": "Pennsylvania",
+     "abbr": "PA",
+     "points": 0,
+     "contribution": 0,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 3,
+     "team": "Southeast",
+     "display": "Alabama",
+     "abbr": "AL",
+     "points": 3,
+     "contribution": 24,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 4,
+     "team": "Asia-Pacific",
+     "display": "South Korea",
+     "abbr": "KOR",
+     "points": 2,
+     "contribution": 14,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 5,
+     "team": "Japan",
+     "display": "Japan",
+     "abbr": "JPN",
+     "points": 5,
+     "contribution": 30,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 6,
+     "team": "Midwest",
+     "display": "Iowa",
+     "abbr": "IA",
+     "points": 4,
+     "contribution": 20,
+     "state": "eliminated",
+     "alive": false
+    },
+    {
+     "rank": 7,
+     "team": "Curacao",
+     "display": "Curacao",
+     "abbr": "CUW",
+     "points": 13,
+     "contribution": 52,
+     "state": "side_champion",
+     "alive": true
+    },
+    {
+     "rank": 8,
+     "team": "Mexico",
+     "display": "Mexico",
+     "abbr": "MEX",
+     "points": 2,
+     "contribution": 6,
+     "state": "eliminated",
+     "alive": false
+    }
+   ],
+   "tb_final_runs": 8
+  },
+  {
+   "rank": 9,
    "name": "Brett 'The Oracle' Blair",
    "total": 127,
-   "movement": 0,
-   "alive": 2,
+   "movement": -3,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -526,8 +796,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 25,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 7,
@@ -546,18 +816,18 @@
      "abbr": "OH",
      "points": 5,
      "contribution": 15,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     }
    ],
    "tb_final_runs": 13
   },
   {
-   "rank": 7,
+   "rank": 10,
    "name": "Josh Hilverda",
    "total": 124,
-   "movement": 0,
-   "alive": 1,
+   "movement": -3,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -566,8 +836,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 50,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 2,
@@ -641,283 +911,13 @@
     }
    ],
    "tb_final_runs": 9
-  },
-  {
-   "rank": 7,
-   "name": "Phil Paterson",
-   "total": 124,
-   "movement": 0,
-   "alive": 2,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 2,
-     "contribution": 20,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 2,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 5,
-     "contribution": 45,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 4,
-     "team": "Mountain",
-     "display": "Nevada",
-     "abbr": "NV",
-     "points": 6,
-     "contribution": 42,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 5,
-     "team": "Caribbean",
-     "display": "Dominican Republic",
-     "abbr": "DOM",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 6,
-     "team": "Australia",
-     "display": "Australia",
-     "abbr": "AUS",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 7,
-     "team": "Northwest",
-     "display": "Washington",
-     "abbr": "WA",
-     "points": 2,
-     "contribution": 8,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 8,
-     "team": "Canada",
-     "display": "Canada",
-     "abbr": "CAN",
-     "points": 3,
-     "contribution": 9,
-     "state": "eliminated",
-     "alive": false
-    }
-   ],
-   "tb_final_runs": 7
-  },
-  {
-   "rank": 9,
-   "name": "Jaden Hanna",
-   "total": 119,
-   "movement": 0,
-   "alive": 2,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 2,
-     "contribution": 20,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 2,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 5,
-     "contribution": 45,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 3,
-     "team": "Southwest",
-     "display": "Texas",
-     "abbr": "TX",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 4,
-     "team": "Caribbean",
-     "display": "Dominican Republic",
-     "abbr": "DOM",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 5,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 6,
-     "team": "Curacao",
-     "display": "Curacao",
-     "abbr": "CUW",
-     "points": 6,
-     "contribution": 30,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 7,
-     "team": "Southeast",
-     "display": "Alabama",
-     "abbr": "AL",
-     "points": 3,
-     "contribution": 12,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 8,
-     "team": "Latin America",
-     "display": "Nicaragua",
-     "abbr": "NIC",
-     "points": 4,
-     "contribution": 12,
-     "state": "eliminated",
-     "alive": false
-    }
-   ],
-   "tb_final_runs": 9
-  },
-  {
-   "rank": 10,
-   "name": "Steven Huzzey",
-   "total": 118,
-   "movement": 0,
-   "alive": 2,
-   "picks": [
-    {
-     "rank": 1,
-     "team": "West",
-     "display": "California",
-     "abbr": "CA",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 2,
-     "team": "Mid-Atlantic",
-     "display": "Pennsylvania",
-     "abbr": "PA",
-     "points": 0,
-     "contribution": 0,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 3,
-     "team": "Southeast",
-     "display": "Alabama",
-     "abbr": "AL",
-     "points": 3,
-     "contribution": 24,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 4,
-     "team": "Asia-Pacific",
-     "display": "South Korea",
-     "abbr": "KOR",
-     "points": 2,
-     "contribution": 14,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 5,
-     "team": "Japan",
-     "display": "Japan",
-     "abbr": "JPN",
-     "points": 5,
-     "contribution": 30,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 6,
-     "team": "Midwest",
-     "display": "Iowa",
-     "abbr": "IA",
-     "points": 4,
-     "contribution": 20,
-     "state": "eliminated",
-     "alive": false
-    },
-    {
-     "rank": 7,
-     "team": "Curacao",
-     "display": "Curacao",
-     "abbr": "CUW",
-     "points": 6,
-     "contribution": 24,
-     "state": "winners",
-     "alive": true
-    },
-    {
-     "rank": 8,
-     "team": "Mexico",
-     "display": "Mexico",
-     "abbr": "MEX",
-     "points": 2,
-     "contribution": 6,
-     "state": "eliminated",
-     "alive": false
-    }
-   ],
-   "tb_final_runs": 8
   },
   {
    "rank": 11,
    "name": "Miles Campbell",
    "total": 107,
    "movement": 0,
-   "alive": 2,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -966,8 +966,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 30,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 6,
@@ -976,8 +976,8 @@
      "abbr": "OH",
      "points": 5,
      "contribution": 25,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 7,
@@ -1007,7 +1007,7 @@
    "name": "Ian Grannary",
    "total": 106,
    "movement": 0,
-   "alive": 1,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -1026,8 +1026,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 45,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 3,
@@ -1097,7 +1097,7 @@
    "name": "Felipe De Paula",
    "total": 103,
    "movement": 0,
-   "alive": 1,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -1116,8 +1116,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 45,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 3,
@@ -1187,7 +1187,7 @@
    "name": "Andrew Mallon",
    "total": 102,
    "movement": 0,
-   "alive": 1,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -1206,8 +1206,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 45,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 3,
@@ -1277,7 +1277,7 @@
    "name": "Jean-Francois C\u00f4t\u00e9",
    "total": 97,
    "movement": 0,
-   "alive": 1,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -1326,8 +1326,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 30,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 6,
@@ -1367,7 +1367,7 @@
    "name": "Abby Gubbels",
    "total": 77,
    "movement": 0,
-   "alive": 1,
+   "alive": 0,
    "picks": [
     {
      "rank": 1,
@@ -1416,8 +1416,8 @@
      "abbr": "JPN",
      "points": 5,
      "contribution": 30,
-     "state": "winners",
-     "alive": true
+     "state": "eliminated",
+     "alive": false
     },
     {
      "rank": 6,
@@ -1522,10 +1522,10 @@
    "league": "Pariba LL",
    "side": "INTL",
    "seat": "C",
-   "state": "winners",
+   "state": "side_champion",
    "alive": true,
-   "label": "International Championship \u2014 Sat Aug 29, 9:30 AM PT",
-   "points": 6,
+   "label": "INTERNATIONAL CHAMPION",
+   "points": 13,
    "picked_by": 6,
    "picked_at_one": 0
   },
@@ -1552,9 +1552,9 @@
    "league": "West Side LL",
    "side": "US",
    "seat": "C",
-   "state": "winners",
-   "alive": true,
-   "label": "United States Championship \u2014 Sat Aug 29, 12:30 PM PT",
+   "state": "eliminated",
+   "alive": false,
+   "label": "Eliminated \u2014 United States Championship",
    "points": 5,
    "picked_by": 4,
    "picked_at_one": 0
@@ -1567,9 +1567,9 @@
    "league": "Joto LL",
    "side": "INTL",
    "seat": "C",
-   "state": "winners",
-   "alive": true,
-   "label": "International Championship \u2014 Sat Aug 29, 9:30 AM PT",
+   "state": "eliminated",
+   "alive": false,
+   "label": "Eliminated \u2014 International Championship",
    "points": 5,
    "picked_by": 16,
    "picked_at_one": 4
@@ -1657,10 +1657,10 @@
    "league": "Paseo Verde LL",
    "side": "US",
    "seat": "C",
-   "state": "winners",
+   "state": "side_champion",
    "alive": true,
-   "label": "United States Championship \u2014 Sat Aug 29, 12:30 PM PT",
-   "points": 6,
+   "label": "U.S. CHAMPION",
+   "points": 13,
    "picked_by": 3,
    "picked_at_one": 0
   },
@@ -1757,6 +1757,36 @@
  ],
  "recent": [
   {
+   "game": 37,
+   "label": "Consolation (no pool points)",
+   "winner": "Japan",
+   "loser": "Great Lakes",
+   "winner_display": "Japan",
+   "loser_display": "Ohio",
+   "date": "2026-08-30",
+   "time": "7:00 AM"
+  },
+  {
+   "game": 36,
+   "label": "United States Championship",
+   "winner": "Mountain",
+   "loser": "Great Lakes",
+   "winner_display": "Nevada",
+   "loser_display": "Ohio",
+   "date": "2026-08-29",
+   "time": "12:30 PM"
+  },
+  {
+   "game": 35,
+   "label": "International Championship",
+   "winner": "Curacao",
+   "loser": "Japan",
+   "winner_display": "Curacao",
+   "loser_display": "Japan",
+   "date": "2026-08-29",
+   "time": "9:30 AM"
+  },
+  {
    "game": 34,
    "label": "Elimination Final",
    "winner": "Great Lakes",
@@ -1764,7 +1794,7 @@
    "winner_display": "Ohio",
    "loser_display": "Iowa",
    "date": "2026-08-27",
-   "time": "4:00 PM"
+   "time": "6:00 AM"
   },
   {
    "game": 33,
@@ -1774,7 +1804,7 @@
    "winner_display": "Japan",
    "loser_display": "Nicaragua",
    "date": "2026-08-27",
-   "time": "12:00 PM"
+   "time": "6:00 AM"
   },
   {
    "game": 32,
@@ -1784,87 +1814,21 @@
    "winner_display": "Ohio",
    "loser_display": "Alabama",
    "date": "2026-08-26",
-   "time": "2:00 PM"
-  },
-  {
-   "game": 31,
-   "label": "Elimination Round 4",
-   "winner": "Japan",
-   "loser": "Canada",
-   "winner_display": "Japan",
-   "loser_display": "Canada",
-   "date": "2026-08-26",
-   "time": "10:00 AM"
-  },
-  {
-   "game": 30,
-   "label": "Winners Bracket Final",
-   "winner": "Mountain",
-   "loser": "Midwest",
-   "winner_display": "Nevada",
-   "loser_display": "Iowa",
-   "date": "2026-08-26",
    "time": "4:00 PM"
-  },
-  {
-   "game": 29,
-   "label": "Winners Bracket Final",
-   "winner": "Curacao",
-   "loser": "Latin America",
-   "winner_display": "Curacao",
-   "loser_display": "Nicaragua",
-   "date": "2026-08-26",
-   "time": "12:00 PM"
   }
  ],
  "upcoming": [
-  {
-   "game": 35,
-   "label": "International Championship",
-   "side": "INTL",
-   "date": "2026-08-29",
-   "time": "9:30 AM",
-   "a": "Curacao",
-   "b": "Japan",
-   "a_display": "Curacao",
-   "b_display": "Japan",
-   "ready": true
-  },
-  {
-   "game": 36,
-   "label": "United States Championship",
-   "side": "US",
-   "date": "2026-08-29",
-   "time": "12:30 PM",
-   "a": "Mountain",
-   "b": "Great Lakes",
-   "a_display": "Nevada",
-   "b_display": "Ohio",
-   "ready": true
-  },
-  {
-   "game": 37,
-   "label": "Consolation (no pool points)",
-   "side": "BOTH",
-   "date": "2026-08-30",
-   "time": "7:00 AM",
-   "a": "TBD",
-   "b": "TBD",
-   "a_display": "TBD",
-   "b_display": "TBD",
-   "ready": false
-  },
   {
    "game": 38,
    "label": "WORLD CHAMPIONSHIP",
    "side": "BOTH",
    "date": "2026-08-30",
    "time": "12:00 PM",
-   "a": "TBD",
-   "b": "TBD",
-   "a_display": "TBD",
-   "b_display": "TBD",
-   "ready": false
+   "a": "Curacao",
+   "b": "Mountain",
+   "a_display": "Curacao",
+   "b_display": "Nevada",
+   "ready": true
   }
  ],
  "scoring_summary": {
