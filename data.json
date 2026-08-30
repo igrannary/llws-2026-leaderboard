@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-30T15:25:02",
- "generated_display": "Aug 30, 3:25 PM",
+ "generated_at": "2026-08-30T15:55:02",
+ "generated_display": "Aug 30, 3:55 PM",
  "games_played": 38,
  "games_total": 38,
  "champion": "Curacao",
@@ -106,7 +106,7 @@
    "rank": 2,
    "name": "Jonathan Loewen",
    "total": 244,
-   "movement": 2,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -286,7 +286,7 @@
    "rank": 4,
    "name": "Barry Rosenblood",
    "total": 222,
-   "movement": -2,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Jaden Hanna",
    "total": 199,
-   "movement": 2,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Steven Huzzey",
    "total": 182,
-   "movement": 1,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 8,
    "name": "Phil Paterson",
    "total": 173,
-   "movement": -3,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
