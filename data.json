@@ -1,8 +1,8 @@
 {
  "build": "9d7b801e",
  "timezone": "PT",
- "generated_at": "2026-08-30T10:40:45",
- "generated_display": "Aug 30, 10:40 AM",
+ "generated_at": "2026-08-30T10:55:07",
+ "generated_display": "Aug 30, 10:55 AM",
  "games_played": 37,
  "games_total": 38,
  "champion": null,
@@ -376,7 +376,7 @@
    "rank": 5,
    "name": "Phil Paterson",
    "total": 173,
-   "movement": 2,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -466,7 +466,7 @@
    "rank": 6,
    "name": "Jazz Shields",
    "total": 156,
-   "movement": -1,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -556,7 +556,7 @@
    "rank": 7,
    "name": "Jaden Hanna",
    "total": 154,
-   "movement": 2,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -646,7 +646,7 @@
    "rank": 8,
    "name": "Steven Huzzey",
    "total": 146,
-   "movement": 2,
+   "movement": 0,
    "alive": 1,
    "picks": [
     {
@@ -736,7 +736,7 @@
    "rank": 9,
    "name": "Brett 'The Oracle' Blair",
    "total": 127,
-   "movement": -3,
+   "movement": 0,
    "alive": 0,
    "picks": [
     {
@@ -826,7 +826,7 @@
    "rank": 10,
    "name": "Josh Hilverda",
    "total": 124,
-   "movement": -3,
+   "movement": 0,
    "alive": 0,
    "picks": [
     {
